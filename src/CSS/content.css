@@ -1,0 +1,21 @@
+.background1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgb(0, 255, 255);
+}
+
+.background2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgb(89, 0, 255);
+}

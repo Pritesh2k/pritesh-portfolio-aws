@@ -3,13 +3,26 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 100dp;
-    height: 30dp;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    padding: 1rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    width: 100vw;
+    height: 10vh;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
 
     list-style: none;
-    background-color: aqua;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.712) 0%, rgba(255, 255, 255, 0.7) 100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Adjust the box-shadow for a subtle frosty effect */
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+    color: #333; /* Adjust the text color */
 }
