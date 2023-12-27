@@ -4,67 +4,82 @@
     justify-content: center;
     height: 75%;
     gap: 5%;
-  
+
     > div {
-      flex: 0 100% 20%;
-      border-radius: 0.5rem;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-      box-shadow: 1px 5px 15px #1e0e3e;
-      position: relative;
-      overflow: hidden;
-
-      .content {
-        font-size: 1.5rem;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        padding: 15px;
-        background: #333; /* Set the dark grey background color */
-        transform: translateY(0%); /* Set the initial transform */
-        transition: opacity 0.25s ease-in-out, transform 0.5s 0.2s;
-        visibility: visible; /* Set the initial visibility */
-    
-        span {
-          display: block;
-          margin-top: 5px;
-          font-size: 1.2rem;
-        }
-      }
-  
-      &:hover {
-        flex: 0 100% 40%;
+        flex: 0 100% 20%;
+        border-radius: 0.5rem;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
         box-shadow: 1px 5px 15px #1e0e3e;
-        transform: translateY(-30px);
-      }
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            flex: 0 100% 40%;
+            box-shadow: 1px 5px 15px #1e0e3e;
+            transform: translateY(-30px);
+
+            .content-context {
+                height: 85%;
+            }
+        }
+
+        .content {
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 15px;
+            background: #333;
+            transform: translateY(0%);
+            transition: opacity 0.25s ease-in-out, transform 0.5s 0.2s;
+            visibility: visible;
+
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .content-context {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Added to center the content vertically */
+            flex-direction: row;
+            width: 100%;
+            height: 0%;
+            gap: 1rem;
+            overflow: hidden;
+            transition: height 0.5s ease-in-out;
+        }
+
+        .content-context ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Added to center the content vertically */
+
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            list-style: none;
+        }
     }
-  }
 
-  .icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 15%;
-    background-color: rgb(0, 0, 0);
-  }
+    @media (max-width: 768px) {
+        > div {
+            flex: 0 100% 40%;
+        }
+    }
 
-  .content-context{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 85%;
-    background-color: rgb(0, 0, 0);
-  }
-
-  .content-context ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
+    @media (max-width: 576px) {
+        > div {
+            flex: 0 100% 60%;
+        }
+    }
+}

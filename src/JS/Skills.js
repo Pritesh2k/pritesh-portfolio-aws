@@ -15,19 +15,62 @@ function Skills() {
                     </div>
                     <div className='content-context'>
                         <ul>
-                            <li>SQL</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>React.js</li>
+                        </ul>
+
+                        <ul>
+                            <li>C#</li>
+                            <li>R</li>
+                            <li>HTML & CSS</li>
+                            <li>Node.js</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div>
                 <div className="content">
-                    <SchoolIcon fontSize='large' />
+                    <div className='icon'>
+                        <SchoolIcon fontSize='large' />
+                    </div>
+                    <div className='content-context'>
+                        <ul>
+                            <li>Artificial Intelligence</li>
+                            <li>Data Analytics</li>
+                            <li>Database Management</li>
+                            <li>Unit Testing</li>
+                        </ul>
+
+                        <ul>
+                            <li>Cybersecurity</li>
+                            <li>Data Structures</li>
+                            <li>Object Orientated Programming</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div>
                 <div className="content">
-                    <EmojiEventsIcon fontSize='large' />
+                    <div className='icon'>
+                        <EmojiEventsIcon fontSize='large' />
+                    </div>
+                    <div className='content-context'>
+                        <ul>
+                            <li>NPM</li>
+                            <li>Rest APIs</li>
+                            <li>Project Management</li>
+                            <li>MS Office</li>
+                        </ul>
+
+                        <ul>
+                            <li>Git</li>
+                            <li>Project Architecture</li>
+                            <li>Problem Solver</li>
+                            <li>Team Player</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

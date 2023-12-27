@@ -1,5 +1,7 @@
 
 import './App.css';
+import About from './JS/About';
+import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
     <>
       <header class="header">
         <div className='header-contianer-wrapper'>
-
+          <About/>
         </div>
       </header>
 
@@ -20,8 +22,7 @@ function App() {
         <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
         <div class="nav">
           <ul class="nav__items">
-            {/* <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> */}
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            {/* <li class="nav__item"><a href="#about" class="nav__link">About</a></li> */}
             <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
             <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -30,13 +31,13 @@ function App() {
       </nav>
 
       <main>
-        <section class="about">
+        {/* <section class="about">
           <div id="about">
             <div className='about-container-wrapper'>
-              About
+              
             </div>
           </div>
-        </section>
+        </section> */}
         <section class="portfolio">
           <div id="skills">
             <div className='about-container-wrapper'>
@@ -47,7 +48,7 @@ function App() {
         <section class="portfolio">
           <div id="portfolio">
             <div className='about-container-wrapper'>
-              Portfolio
+              <Portfolio/>
             </div>
           </div>
         </section>
