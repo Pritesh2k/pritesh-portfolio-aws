@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import NavBar from './JS/NavBar';
+
 import './App.css';
-import Content from './JS/Content';
+import Skills from './JS/Skills';
 
 function App() {
   return (
     <>
       <header class="header">
-        <h1>Header</h1>
+        <div className='header-contianer-wrapper'>
+
+        </div>
       </header>
 
       <nav class="sticky navbar">
@@ -19,8 +20,9 @@ function App() {
         <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
         <div class="nav">
           <ul class="nav__items">
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            {/* <li class="nav__item"><a href="#home" class="nav__link">Home</a></li> */}
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
             <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
@@ -28,24 +30,32 @@ function App() {
       </nav>
 
       <main>
-        <section class="home">
-          <div id="home">
-            <h1>Home</h1>
-          </div>
-        </section>
         <section class="about">
           <div id="about">
-            <h1>About</h1>
+            <div className='about-container-wrapper'>
+              About
+            </div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div id="skills">
+            <div className='about-container-wrapper'>
+              <Skills/>
+            </div>
           </div>
         </section>
         <section class="portfolio">
           <div id="portfolio">
-            <h1>Portfolio</h1>
+            <div className='about-container-wrapper'>
+              Portfolio
+            </div>
           </div>
         </section>
         <section class="contact">
           <div id="contact">
-            <h1>Contact</h1>
+            <div className='about-container-wrapper'>
+              Contact
+            </div>
           </div>
         </section>
       </main>
