@@ -1,67 +1,118 @@
-
+import React, { useEffect } from 'react';
 import './App.css';
 import About from './JS/About';
 import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
 
 function App() {
+
+  useEffect(() => {
+    const navCheckbox = document.getElementById('nav');
+    const body = document.body;
+
+    const handleClick = () => {
+      // Toggle the "nav-open" class on the body
+      body.classList.toggle('nav-open', navCheckbox.checked);
+    };
+
+    if (navCheckbox) navCheckbox.addEventListener('change', handleClick);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      if (navCheckbox) navCheckbox.removeEventListener('change', handleClick);
+    };
+  }, []);
+  
+  useEffect(() => {
+    // JavaScript code to uncheck the checkbox when nav__link is clicked
+    const navCheckbox = document.getElementById('nav');
+    const skillsLink = document.getElementById('skillsLink');
+    const portfolioLink = document.getElementById('portfolioLink');
+    const contactLink = document.getElementById('contactLink');
+
+    const handleClick = () => {
+      navCheckbox.checked = false;
+    };
+
+    if (skillsLink) skillsLink.addEventListener('click', handleClick);
+    if (portfolioLink) portfolioLink.addEventListener('click', handleClick);
+    if (contactLink) contactLink.addEventListener('click', handleClick);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      if (skillsLink) skillsLink.removeEventListener('click', handleClick);
+      if (portfolioLink) portfolioLink.removeEventListener('click', handleClick);
+      if (contactLink) contactLink.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   return (
     <>
-      <header class="header">
-        <div className='header-contianer-wrapper'>
-          <About/>
+      <header className="header">
+        <div className="header-contianer-wrapper">
+          <About />
         </div>
       </header>
 
-      <nav class="sticky navbar">
-        <div class="brand  display__logo">
-          <a href="#top" class="nav__link"> <span>Pritesh Parekh</span></a>
+      <nav className="sticky navbar">
+        <div className="brand  display__logo">
+          <a href="#top" className="nav__link">
+            {' '}
+            <span>Pritesh Parekh</span>
+          </a>
         </div>
 
-        <input type="checkbox" id="nav" class="hidden" />
-        <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
-        <div class="nav">
-          <ul class="nav__items">
-            {/* <li class="nav__item"><a href="#about" class="nav__link">About</a></li> */}
-            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <input type="checkbox" id="nav" className="hidden" />
+        <label htmlFor="nav" className="nav__open">
+          <i></i>
+          <i></i>
+          <i></i>
+        </label>
+        <div className="nav">
+          <ul className="nav__items">
+            {/* <li className="nav__item"><a href="#about" className="nav__link">About</a></li> */}
+            <li className="nav__item">
+              <a href="#skills" className="nav__link" id="skillsLink">
+                Skills
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#portfolio" className="nav__link" id="portfolioLink">
+                Portfolio
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#contact" className="nav__link" id="contactLink">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
 
       <main>
-        {/* <section class="about">
-          <div id="about">
-            <div className='about-container-wrapper'>
-              
-            </div>
-          </div>
-        </section> */}
-        <section class="portfolio">
+        <section className="portfolio">
           <div id="skills">
-            <div className='about-container-wrapper'>
-              <Skills/>
+            <div className="about-container-wrapper">
+              <Skills />
             </div>
           </div>
         </section>
-        <section class="portfolio">
+        <section className="portfolio">
           <div id="portfolio">
-            <div className='about-container-wrapper'>
-              <Portfolio/>
+            <div className="about-container-wrapper">
+              <Portfolio />
             </div>
           </div>
         </section>
-        <section class="contact">
+        <section className="contact">
           <div id="contact">
-            <div className='about-container-wrapper'>
-              Contact
-            </div>
+            <div className="about-container-wrapper">Contact</div>
           </div>
         </section>
       </main>
 
-      <footer class="footer">
+      <footer className="footer">
         <h1>Footer</h1>
       </footer>
     </>
