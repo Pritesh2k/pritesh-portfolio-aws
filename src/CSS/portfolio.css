@@ -21,9 +21,9 @@ input[type=radio] {
 
 .portfolio-container {
   width: 100%;
-  max-width: 800px;
-  max-height: 600px;
-  height: 100%;
+  max-width: 70%;
+  max-height: 95%;
+  height: 90%;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
@@ -76,9 +76,9 @@ img {
 }
 
 .portfolio-player {
-  background-color: #fff;
   border-radius: 8px;
-  min-width: 320px;
+  min-width: 95%;
+  height: 50%;
   padding: 16px 10px;
 }
 
@@ -87,7 +87,7 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  height: 36px;
+  height: 90%;
   overflow: hidden;
 }
 
@@ -101,22 +101,25 @@ img {
 }
 
 .portfolio-song-info .portfolio-title {
-  color: #403d40;
+  color: #ffffff00;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1rem;
 }
 
 .portfolio-sub-line {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 21.5vh; /* Set your preferred fixed height */
+  overflow: auto;
 }
 
 .portfolio-subtitle,
 .portfolio-time {
-  font-size: 12px;
-  line-height: 16px;
-  color: #c6c5c6;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 1.75rem;
+  text-align: center;
+  color: #3a3a3a;
 }
 
 .portfolio-time {
@@ -153,15 +156,15 @@ img {
 }
 
 #item-2:checked ~ .portfolio-player #test {
-  transform: translateY(0);
+  transform: translateY(0rem);
 }
 
 #item-2:checked ~ .portfolio-player #test {
-  transform: translateY(-40px);
+  transform: translateY(-14rem);
 }
 
 #item-3:checked ~ .portfolio-player #test {
-  transform: translateY(-80px);
+  transform: translateY(-27rem);
 }
 
 .button-wrapper{
@@ -194,4 +197,60 @@ img {
     color: transparent;
     border-color: transparent;
     background-color: transparent;
+}
+
+.object-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  gap: 1rem
+}
+
+.name-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  width: 30%;
+  height: 100vh;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.link-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.year-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.additional-info-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  font-size: 1.75rem;
 }
