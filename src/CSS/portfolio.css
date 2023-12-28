@@ -33,9 +33,9 @@ input[type=radio] {
 
 .portfolio-cards {
   position: relative;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
+  width: 80%;
+  height: 80%;
+  margin-top: 2rem;
 }
 
 img {
@@ -109,8 +109,9 @@ img {
 .portfolio-sub-line {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
   width: 100%;
-  height: 21.5vh; /* Set your preferred fixed height */
+  height: 25vh; /* Set your preferred fixed height */
   overflow: auto;
 }
 
@@ -145,6 +146,7 @@ img {
   height: 100%;
   background-color: #2992dc;
   border-radius: 6px;
+  transition: width 0.5s ease-in-out;
 }
 
 .portfolio-info-area {
@@ -160,11 +162,11 @@ img {
 }
 
 #item-2:checked ~ .portfolio-player #test {
-  transform: translateY(-14rem);
+  transform: translateY(-20rem);
 }
 
 #item-3:checked ~ .portfolio-player #test {
-  transform: translateY(-27rem);
+  transform: translateY(-35rem);
 }
 
 .button-wrapper{

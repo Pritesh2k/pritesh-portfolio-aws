@@ -45,7 +45,18 @@ function Portfolio() {
         setCurrentItem((prevItem) => (prevItem < portfolioItems.length ? prevItem + 1 : 1));
     };
 
-    const currentItemData = portfolioItems.find(item => item.id === currentItem);
+    const currentItemData = portfolioItems.find((item) => item.id === currentItem);
+
+    // Calculate the width percentage based on the current item
+    const progressWidth =
+        currentItem === 1
+            ? '33%'
+            : currentItem === 2
+                ? '66%'
+                : currentItem === 3
+                    ? '100%'
+                    : '0%';
+
 
     return (
         <>
@@ -96,7 +107,7 @@ function Portfolio() {
                         </div>
 
                         <div className="portfolio-progress-bar">
-                            <span className="portfolio-progress" />
+                            <span className="portfolio-progress" style={{ width: progressWidth }} />
                         </div>
                     </div>
 
