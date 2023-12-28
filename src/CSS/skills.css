@@ -83,3 +83,45 @@
         }
     }
 }
+
+.icon-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 2.5vw;
+    height: 2.5vw;
+  
+    border-radius: 10px;
+    background-color: #ffffff17;
+    box-shadow: 0 0px 20px rgba(0, 255, 34, 0.637); /* Add a soft white box shadow */
+  }
+
+  .icon-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 2.5vw;
+    height: 2.5vw;
+  
+    border-radius: 10px;
+    background-color: #ffffff17;
+    box-shadow: 0 0px 20px rgba(0, 174, 255, 0.637); /* Add a soft white box shadow */
+  }
+
+  .icon-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 2.5vw;
+    height: 2.5vw;
+  
+    border-radius: 10px;
+    background-color: #ffffff17;
+    box-shadow: 0 0px 20px rgba(251, 255, 0, 0.637); /* Add a soft white box shadow */
+  }
+
+  
+  

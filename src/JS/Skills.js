@@ -10,7 +10,7 @@ function Skills() {
         <div className="container">
             <div>
                 <div className="content">
-                    <div className='icon'>
+                    <div className='icon-1'>
                         <TerminalIcon fontSize='large' />
                     </div>
                     <div className='content-context'>
@@ -32,7 +32,7 @@ function Skills() {
             </div>
             <div>
                 <div className="content">
-                    <div className='icon'>
+                    <div className='icon-2'>
                         <SchoolIcon fontSize='large' />
                     </div>
                     <div className='content-context'>
@@ -53,7 +53,7 @@ function Skills() {
             </div>
             <div>
                 <div className="content">
-                    <div className='icon'>
+                    <div className='icon-3'>
                         <EmojiEventsIcon fontSize='large' />
                     </div>
                     <div className='content-context'>
