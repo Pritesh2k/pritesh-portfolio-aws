@@ -69,7 +69,7 @@ function Carousel() {
                     showThumbs={false}
                     showStatus={false}
                     showIndicators={false}
-                    interval={20000}
+                    interval={100000}
                     transitionTime={500}
 
                     renderArrowNext={(onClickHandler, hasNext, label) =>
@@ -96,8 +96,13 @@ function Carousel() {
                                     <div className='carousel-contect-text'>
                                         <p>{item.description}</p> {/* Insert dynamic description */}
                                     </div>
-                                    <div className='carousel-keywords'>
-                                        {item.keywords.join(' | ')} {/* Insert dynamic keywords */}
+                                    <div className='carousel-keywords-link-container'>
+                                        <div className='carousel-keywords'>
+                                            {item.keywords.join(' | ')} {/* Insert dynamic keywords */}
+                                        </div>
+                                        <div className='project-link'>
+                                            {item.link && <a href={item.link}>Link To Project</a>}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
