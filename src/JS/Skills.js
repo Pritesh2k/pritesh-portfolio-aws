@@ -5,10 +5,6 @@ import TerminalIcon from '@mui/icons-material/Terminal';
 import SchoolIcon from '@mui/icons-material/School';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
-import TerminalVideo from '../Assets/terminal.mp4';
-import GraduationVideo from '../Assets/graduation.mp4';
-import TrophyVideo from '../Assets/trophy.mp4';
-
 //import videodb
 import { videoDB } from '../config';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
@@ -17,7 +13,6 @@ import { getDownloadURL, listAll, ref } from 'firebase/storage';
 const skillsData = [
     {
         icon: <TerminalIcon fontSize='large' />,
-        video: TerminalVideo,
         categories: [
             'Python', 'JavaScript', 'Java', 'React.js',
             'C#', 'R', 'HTML & CSS', 'Node.js'
@@ -25,7 +20,6 @@ const skillsData = [
     },
     {
         icon: <SchoolIcon fontSize='large' />,
-        video: GraduationVideo,
         categories: [
             'Artificial Intelligence', 'Data Analytics', 'Database Management', 'Unit Testing',
             'Cybersecurity', 'Data Structures', 'Object Orientated Programming'
@@ -33,7 +27,6 @@ const skillsData = [
     },
     {
         icon: <EmojiEventsIcon fontSize='large' />,
-        video: TrophyVideo,
         categories: [
             'NPM', 'Rest APIs', 'Project Management', 'MS Office',
             'Git', 'Project Architecture, Problem Solver, Team Player'
@@ -43,6 +36,7 @@ const skillsData = [
 
 function Skills() {
     const [videoURL, setVideoURL] = useState([]);
+    const [videoURLs, setVideoURLs] = useState({}); // Add this line
 
     const [expandedCards, setExpandedCards] = useState(Array(skillsData.length).fill(false));
 
@@ -54,7 +48,6 @@ function Skills() {
 
     useEffect(() => {
         listAll(ref(videoDB, "Videos")).then(vids => {
-            console.log(vids);
             vids.items.forEach(val => {
                 getDownloadURL(val).then(url => {
                     setVideoURL(data => [...data, url])
@@ -63,7 +56,24 @@ function Skills() {
         })
     }, [])
 
-    // console.log(videoURL, "vidURL");
+    useEffect(() => {
+        listAll(ref(videoDB, "Videos")).then(vids => {
+            const videoURLs = {};
+
+            vids.items.forEach(val => {
+                getDownloadURL(val).then(url => {
+                    const videoName = val.name;
+                    videoURLs[videoName] = url;
+
+                    setVideoURL(data => [...data, url]);
+                });
+            });
+
+            // Update the state with the specific video URLs for each skill card
+            setVideoURLs(videoURLs);
+        });
+    }, []);
+
 
     return (
         <>
@@ -82,20 +92,43 @@ function Skills() {
                                 <li key={i}>{category}</li>
                             ))}
                         </ul>
+
                         {/* <video autoPlay muted loop className='video-player'>
                             <source src={skill.video} type='video/mp4' />
                             Your browser does not support the video tag.
                         </video> */}
 
                         {
-                            videoURL.map((dataVal, videoIndex) => (
-                                index === videoIndex && (
-                                    <video key={videoIndex} autoPlay muted loop className='video-player'>
-                                        <source src={dataVal} type='video/mp4' />
+                            videoURLs["terminal.mp4"] && (
+                                index === 0 && (
+                                    <video key={index} autoPlay muted loop className='video-player'>
+                                        <source src={videoURLs["terminal.mp4"]} type='video/mp4' />
                                         Your browser does not support the video tag.
                                     </video>
                                 )
-                            ))
+                            )
+                        }
+
+                        {
+                            videoURLs["graduation.mp4"] && (
+                                index === 1 && (
+                                    <video key={index} autoPlay muted loop className='video-player'>
+                                        <source src={videoURLs["graduation.mp4"]} type='video/mp4' />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                )
+                            )
+                        }
+
+                        {
+                            videoURLs["trophy.mp4"] && (
+                                index === 2 && (
+                                    <video key={index} autoPlay muted loop className='video-player'>
+                                        <source src={videoURLs["trophy.mp4"]} type='video/mp4' />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                )
+                            )
                         }
 
                     </div>
