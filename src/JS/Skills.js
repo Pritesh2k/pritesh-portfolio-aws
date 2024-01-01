@@ -29,7 +29,7 @@ const skillsData = [
         icon: <EmojiEventsIcon fontSize='medium' />,
         categories: [
             'NPM', 'Rest APIs', 'Project Management', 'MS Office',
-            'Git', 'Project Architecture, Problem Solver, Team Player'
+            'Git', 'Project Architecture', 'Problem Solver', 'Team Player'
         ]
     }
 ];
