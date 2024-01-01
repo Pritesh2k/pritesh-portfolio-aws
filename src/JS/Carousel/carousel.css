@@ -1,0 +1,130 @@
+.carousel-container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+.carousel-image {
+    object-fit: cover;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 2vw;
+    cursor: pointer;
+}
+
+.custom-arrow-prev {
+    position: absolute;
+    z-index: 99999;
+    left: 2%;
+}
+
+.custom-arrow-next {
+    right: 2%;
+}
+
+.custom-arrow:hover {
+    background-color: #2980b9;
+}
+
+.carousel-context {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    width: 85%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.carousel-context-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 20%;
+}
+
+.carousel-context-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 50%;
+    height: 100%;
+    font-size: 2.5vw;
+    color: white;
+}
+
+.carousel-context-date {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+    height: 100%;
+    font-size: 2.25vw;
+    color: rgb(204, 204, 204);
+}
+
+.carousel-contect-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: white;
+}
+
+.carousel-keywords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    font-size: 1.25rem;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .carousel-context-title {
+        font-size: 4vw;
+    }
+
+    .carousel-context-date {
+        font-size: 3.5vw;
+    }
+}

@@ -100,7 +100,7 @@ function App() {
         </section>
         <section className="portfolio">
           <div id="portfolio">
-            <div className="about-container-wrapper">
+            <div className="portfolio-container-wrapper">
               <Portfolio />
             </div>
           </div>
