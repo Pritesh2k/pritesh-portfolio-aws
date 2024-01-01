@@ -12,21 +12,21 @@ import { getDownloadURL, listAll, ref } from 'firebase/storage';
 // I want to fetch the AWS Component here
 const skillsData = [
     {
-        icon: <TerminalIcon fontSize='large' />,
+        icon: <TerminalIcon fontSize='medium' />,
         categories: [
             'Python', 'JavaScript', 'Java', 'React.js',
             'C#', 'R', 'HTML & CSS', 'Node.js'
         ]
     },
     {
-        icon: <SchoolIcon fontSize='large' />,
+        icon: <SchoolIcon fontSize='medium' />,
         categories: [
             'Artificial Intelligence', 'Data Analytics', 'Database Management', 'Unit Testing',
             'Cybersecurity', 'Data Structures', 'Object Orientated Programming'
         ]
     },
     {
-        icon: <EmojiEventsIcon fontSize='large' />,
+        icon: <EmojiEventsIcon fontSize='medium' />,
         categories: [
             'NPM', 'Rest APIs', 'Project Management', 'MS Office',
             'Git', 'Project Architecture, Problem Solver, Team Player'
@@ -35,6 +35,7 @@ const skillsData = [
 ];
 
 function Skills() {
+    //for fetch videos firebase
     const [videoURL, setVideoURL] = useState([]);
     const [videoURLs, setVideoURLs] = useState({}); // Add this line
 
@@ -46,7 +47,9 @@ function Skills() {
         setExpandedCards(newExpandedCards);
     };
 
+    //for fetch videos firebase
     useEffect(() => {
+        //videoDB, "Videos" --> (var) is to store the data from the storage | ("Videos") is storage location
         listAll(ref(videoDB, "Videos")).then(vids => {
             vids.items.forEach(val => {
                 getDownloadURL(val).then(url => {
@@ -87,17 +90,14 @@ function Skills() {
                         <div className={`skill-icon skill-icon-${index + 1}`}>
                             {skill.icon}
                         </div>
+
                         <ul className='skill-list'>
                             {skill.categories.map((category, i) => (
                                 <li key={i}>{category}</li>
                             ))}
                         </ul>
 
-                        {/* <video autoPlay muted loop className='video-player'>
-                            <source src={skill.video} type='video/mp4' />
-                            Your browser does not support the video tag.
-                        </video> */}
-
+                        {/* for fetch videos firebase. */}
                         {
                             videoURLs["terminal.mp4"] && (
                                 index === 0 && (
