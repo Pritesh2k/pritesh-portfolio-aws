@@ -19,8 +19,7 @@ body {
 .header,
 .home,
 .about,
-.portfolio,
-.contact {
+.portfolio {
   height: 100vh;
 }
 
@@ -61,7 +60,7 @@ body {
 }
 
 .footer {
-  height: 50vh;
+  height: 20vh;
   background-color: var(--primary);
 }
 
@@ -329,6 +328,14 @@ body {
   align-items: center;
 
   height: 100vh;
+}
+
+.contact-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
 }
 
 .header-contianer-wrapper {

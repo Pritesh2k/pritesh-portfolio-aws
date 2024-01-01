@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import About from './JS/About';
 import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
+import Hero from './JS/Hero';
 
 function App() {
 
@@ -22,10 +22,11 @@ function App() {
       if (navCheckbox) navCheckbox.removeEventListener('change', handleClick);
     };
   }, []);
-  
+
   useEffect(() => {
     // JavaScript code to uncheck the checkbox when nav__link is clicked
     const navCheckbox = document.getElementById('nav');
+    const aboutLink = document.getElementById('aboutLink');
     const skillsLink = document.getElementById('skillsLink');
     const portfolioLink = document.getElementById('portfolioLink');
     const contactLink = document.getElementById('contactLink');
@@ -34,12 +35,14 @@ function App() {
       navCheckbox.checked = false;
     };
 
+    if (aboutLink) aboutLink.addEventListener('click', handleClick);
     if (skillsLink) skillsLink.addEventListener('click', handleClick);
     if (portfolioLink) portfolioLink.addEventListener('click', handleClick);
     if (contactLink) contactLink.addEventListener('click', handleClick);
 
     // Cleanup event listeners on component unmount
     return () => {
+      if (aboutLink) aboutLink.removeEventListener('click', handleClick);
       if (skillsLink) skillsLink.removeEventListener('click', handleClick);
       if (portfolioLink) portfolioLink.removeEventListener('click', handleClick);
       if (contactLink) contactLink.removeEventListener('click', handleClick);
@@ -50,7 +53,7 @@ function App() {
     <>
       <header className="header">
         <div className="header-contianer-wrapper">
-          <About />
+          <Hero />
         </div>
       </header>
 
@@ -70,7 +73,11 @@ function App() {
         </label>
         <div className="nav">
           <ul className="nav__items">
-            {/* <li className="nav__item"><a href="#about" className="nav__link">About</a></li> */}
+            <li className="nav__item">
+              <a href="#about" className="nav__link">
+                About
+              </a>
+            </li>
             <li className="nav__item">
               <a href="#skills" className="nav__link" id="skillsLink">
                 Skills
@@ -92,6 +99,13 @@ function App() {
 
       <main>
         <section className="portfolio">
+          <div id="about">
+            <div className="about-container-wrapper">
+              About
+            </div>
+          </div>
+        </section>
+        <section className="portfolio">
           <div id="skills">
             <div className="about-container-wrapper">
               <Skills />
@@ -107,7 +121,9 @@ function App() {
         </section>
         <section className="contact">
           <div id="contact">
-            <div className="about-container-wrapper">Contact</div>
+            <div className="contact-container-wrapper">
+              Contact
+            </div>
           </div>
         </section>
       </main>
