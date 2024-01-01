@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../CSS/skills.css';
 
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -9,6 +9,11 @@ import TerminalVideo from '../Assets/terminal.mp4';
 import GraduationVideo from '../Assets/graduation.mp4';
 import TrophyVideo from '../Assets/trophy.mp4';
 
+//import videodb
+import { videoDB } from '../config';
+import { getDownloadURL, listAll, ref } from 'firebase/storage';
+
+// I want to fetch the AWS Component here
 const skillsData = [
     {
         icon: <TerminalIcon fontSize='large' />,
@@ -37,6 +42,8 @@ const skillsData = [
 ];
 
 function Skills() {
+    const [videoURL, setVideoURL] = useState([]);
+
     const [expandedCards, setExpandedCards] = useState(Array(skillsData.length).fill(false));
 
     const handleCardClick = (index) => {
@@ -44,6 +51,19 @@ function Skills() {
         newExpandedCards[index] = !newExpandedCards[index];
         setExpandedCards(newExpandedCards);
     };
+
+    useEffect(() => {
+        listAll(ref(videoDB, "Videos")).then(vids => {
+            console.log(vids);
+            vids.items.forEach(val => {
+                getDownloadURL(val).then(url => {
+                    setVideoURL(data => [...data, url])
+                })
+            })
+        })
+    }, [])
+
+    // console.log(videoURL, "vidURL");
 
     return (
         <>
@@ -62,10 +82,22 @@ function Skills() {
                                 <li key={i}>{category}</li>
                             ))}
                         </ul>
-                        <video autoPlay muted loop className='video-player'>
+                        {/* <video autoPlay muted loop className='video-player'>
                             <source src={skill.video} type='video/mp4' />
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
+
+                        {
+                            videoURL.map((dataVal, videoIndex) => (
+                                index === videoIndex && (
+                                    <video key={videoIndex} autoPlay muted loop className='video-player'>
+                                        <source src={dataVal} type='video/mp4' />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                )
+                            ))
+                        }
+
                     </div>
                 ))}
             </div>
