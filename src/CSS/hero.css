@@ -1,9 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:600);
 
+.hero-container{
+  display: flex;
+  gap: 3vw;
+}
+
 .h1-text {
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    font-size: 52px;
+    font-size: 5vw;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -55,4 +60,12 @@
 
 .h1-text span:nth-child(7) {
     animation-delay: 0.7s;
+}
+
+.h1-text span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.h1-text span:nth-child(9) {
+  animation-delay: 0.9s;
 }
