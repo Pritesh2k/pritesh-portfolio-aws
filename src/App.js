@@ -102,8 +102,7 @@ function App() {
         <section className="portfolio">
           <div id="about">
             <div className="about-container-wrapper">
-              {/* <About/> */}
-              About
+              <About/>
             </div>
           </div>
         </section>
