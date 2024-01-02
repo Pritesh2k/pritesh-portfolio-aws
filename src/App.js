@@ -3,6 +3,7 @@ import './App.css';
 import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
 import Hero from './JS/Hero';
+import About from './JS/About';
 
 function App() {
 
@@ -74,7 +75,7 @@ function App() {
         <div className="nav">
           <ul className="nav__items">
             <li className="nav__item">
-              <a href="#about" className="nav__link">
+              <a href="#about" className="nav__link" id="aboutLink">
                 About
               </a>
             </li>
@@ -101,13 +102,14 @@ function App() {
         <section className="portfolio">
           <div id="about">
             <div className="about-container-wrapper">
+              {/* <About/> */}
               About
             </div>
           </div>
         </section>
         <section className="portfolio">
           <div id="skills">
-            <div className="about-container-wrapper">
+            <div className="skills-container-wrapper">
               <Skills />
             </div>
           </div>

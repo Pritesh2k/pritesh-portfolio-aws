@@ -16,11 +16,14 @@ body {
   margin: 0;
 }
 
-.header,
 .home,
 .about,
 .portfolio {
   height: 100vh;
+}
+
+.header{
+  height: 93vh;
 }
 
 .header,
@@ -43,15 +46,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.header h1::before,
-.home h1::before,
-.about h1::before,
-.portfolio h1::before,
-.contact h1::before,
-.footer h1::before {
-  content: '#';
 }
 
 .header h1,
@@ -316,10 +310,15 @@ body {
 
   height: 100vh;
 
-  padding-top: 5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 7vh;
+}
+
+.skills-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
 }
 
 .portfolio-container-wrapper {
