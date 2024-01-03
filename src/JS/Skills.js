@@ -9,7 +9,6 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { videoDB } from '../config';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
 
-// I want to fetch the AWS Component here
 const skillsData = [
     {
         icon: <TerminalIcon fontSize='medium' />,

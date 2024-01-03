@@ -91,6 +91,8 @@
 
     font-size: 1.25rem;
     color: white;
+
+    transition: all 1s ease-in-out;
 }
 
 .about-rightside-container{
@@ -123,14 +125,12 @@
     height: 100%;
 }
 
-
-
 .about-custom-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    color: #7c7c7c;
+    color: #ff00006e;
     border: none;
     padding: 2vw;
     cursor: pointer;
@@ -152,7 +152,7 @@
 }
 
 .about-custom-arrow:hover {
-    color: #ffffff;
+    color: #ff0000;
 }
 
 .about-carousel-image-container{

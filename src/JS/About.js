@@ -90,7 +90,7 @@ function About() {
                 <div className='above-img-container'>
                     <div className='about-leftside-container'>
                         <div className='left-side-title'>
-                            <p>Hello, <br/> I'm Pritesh<span>.</span></p>
+                            <p>Hello<span>,</span> <br/> I'm Pritesh<span>.</span></p>
                         </div>
                         <div className='left-side-links'>
                             <a href='https://github.com/Pritesh2k'><GitHubIcon fontSize='large' /></a>

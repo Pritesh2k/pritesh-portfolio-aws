@@ -35,7 +35,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    color: #7c7c7c;
+    color: #ff00006e;
     border: none;
     padding: 2vw;
     cursor: pointer;
@@ -55,7 +55,7 @@
 }
 
 .custom-arrow:hover {
-    color: #ffffff;
+    color: #ff0000;
 }
 
 .carousel-context {

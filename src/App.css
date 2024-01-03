@@ -29,17 +29,6 @@ body {
   height: 100vh;
 }
 
-#Main-HEADER,
-#Main-NAV,
-.about,
-.skills,
-.portfolio,
-.contact,
-#Main-FOOTER
-{
-  scroll-snap-align: center;
-}
-
 .header,
 .home,
 .about,
