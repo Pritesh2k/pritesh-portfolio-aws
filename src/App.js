@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
@@ -6,7 +6,6 @@ import Hero from './JS/Hero';
 import About from './JS/About';
 
 function App() {
-
   useEffect(() => {
     const navCheckbox = document.getElementById('nav');
     const body = document.body;
@@ -59,7 +58,7 @@ function App() {
       </header>
 
       <nav className="sticky navbar">
-        <div className="brand  display__logo">
+        <div className="brand display__logo">
           <a href="#top" className="nav__link">
             {' '}
             <span>Pritesh Parekh</span>
@@ -99,32 +98,24 @@ function App() {
       </nav>
 
       <main>
-        <section className="portfolio">
-          <div id="about">
-            <div className="about-container-wrapper">
-              <About/>
-            </div>
+        <section className="portfolio" id="about">
+          <div className="about-container-wrapper">
+            <About />
           </div>
         </section>
-        <section className="portfolio">
-          <div id="skills">
-            <div className="skills-container-wrapper">
-              <Skills />
-            </div>
+        <section className="portfolio" id="skills">
+          <div className="skills-container-wrapper">
+            <Skills />
           </div>
         </section>
-        <section className="portfolio">
-          <div id="portfolio">
-            <div className="portfolio-container-wrapper">
-              <Portfolio />
-            </div>
+        <section className="portfolio" id="portfolio">
+          <div className="portfolio-container-wrapper">
+            <Portfolio />
           </div>
         </section>
-        <section className="contact">
-          <div id="contact">
-            <div className="contact-container-wrapper">
-              Contact
-            </div>
+        <section className="contact" id="contact">
+          <div className="contact-container-wrapper">
+            Contact
           </div>
         </section>
       </main>

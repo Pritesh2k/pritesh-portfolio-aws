@@ -57,6 +57,15 @@ function Carousel() {
             link: 'Link',
             keywords: ['Key', 'Words', 'Go', 'Here'],
         },
+        {
+            id: 4,
+            image: webdev,
+            title: 'Title',
+            description: 'Description',
+            year: 'Year',
+            link: 'Link',
+            keywords: ['Key', 'Words', 'Go', 'Here'],
+        },
     ];
 
     return (

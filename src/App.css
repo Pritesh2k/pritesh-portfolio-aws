@@ -5,25 +5,39 @@
 }
 
 * {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   box-sizing: border-box;
   /* Include padding and border in the box model */
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Roboto', monospace;
   line-height: 1.6;
   margin: 0;
+
+  scroll-snap-type: y mandatory;
 }
 
+.header,
 .home,
 .about,
 .portfolio {
   height: 100vh;
 }
 
-.header{
-  height: 100vh;
+#Main-HEADER,
+#Main-NAV,
+.about,
+.skills,
+.portfolio,
+.contact,
+#Main-FOOTER
+{
+  scroll-snap-align: center;
 }
 
 .header,
@@ -72,7 +86,7 @@ body {
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 .hidden {
@@ -233,12 +247,10 @@ body {
   }
 
   .nav__open {
-    position: fixed;
-    right: 10px;
-    top: 16px;
     display: block;
     width: 48px;
     height: 48px;
+    margin-right: 0.5rem;
     cursor: pointer;
     z-index: 9999;
     border-radius: 50%;
@@ -332,7 +344,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 80vh;
+  height: 110vh;
 }
 
 .header-contianer-wrapper {
