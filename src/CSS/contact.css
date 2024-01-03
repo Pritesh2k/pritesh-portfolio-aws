@@ -1,0 +1,70 @@
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.contact-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    height: 100%;
+    padding: 2rem;
+
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+
+    color: rgb(44, 44, 44);
+}
+
+.contact-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80%;
+    height: 100%;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 20%;
+    padding: 2rem;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 15%;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.email-button:hover {
+    background-color: #2980b9;
+}

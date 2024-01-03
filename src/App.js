@@ -4,6 +4,7 @@ import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
 import Hero from './JS/Hero';
 import About from './JS/About';
+import Contact from './JS/Contact';
 
 function App() {
   useEffect(() => {
@@ -115,13 +116,13 @@ function App() {
         </section>
         <section className="contact" id="contact">
           <div className="contact-container-wrapper">
-            Contact
+            <Contact/>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <h1>Footer</h1>
+        <h1>Thanks For Visiting! 👋</h1>
       </footer>
     </>
   );
