@@ -15,21 +15,19 @@ const skillsData = [
         icon: <TerminalIcon fontSize='medium' />,
         categories: [
             'Python', 'JavaScript', 'Java', 'React.js',
-            'C#', 'R', 'HTML & CSS', 'Node.js'
+            'C#', 'R', 'HTML & CSS', 'Node.js', 'Git, Git CLI', 'Rest APIs - Configuration and Usage', 'Wire Shark Packet Monitoring'
         ]
     },
     {
         icon: <SchoolIcon fontSize='medium' />,
         categories: [
-            'Artificial Intelligence', 'Data Analytics', 'Database Management', 'Unit Testing',
-            'Cybersecurity', 'Data Structures', 'Object Orientated Programming'
+            'Software Engineering', 'Object Orientated Programming', 'Software Architecture', 'Development Cycles and Methodologies (Agile)', 'Data Analytics (Pandas)', 'Database Management (3NF Normalisation)', 'Data Structures', 'Unit Testing', 'Artificial Intelligence', 'Supervised & Unsupervised (K-Means, Classification and Neural Networks)', 'Cybersecurity - Threat Analysis, Risk Factors and Mitigation',
         ]
     },
     {
         icon: <EmojiEventsIcon fontSize='medium' />,
         categories: [
-            'NPM', 'Rest APIs', 'Project Management', 'MS Office',
-            'Git', 'Project Architecture', 'Problem Solver', 'Team Player'
+            'Project Management', 'Project Architecture', 'Computational Thinker', 'Problem Solver', 'MS Office', 'Team Player'
         ]
     }
 ];
