@@ -1,10 +1,15 @@
 import React from 'react';
 import '../CSS/hero.css';
 
+import profilePic from '../Assets/Profile-pic.jpg'
+
 function Hero() {
     return (
         <>
             <div className='hero-container'>
+                <div className='header-image-container'>
+                    <img className='header-image' src={profilePic} alt='image'/>
+                </div>
                 <div className='hero-main-title-container'>
                     <div className='h1-text'>
                         <span>W</span>
