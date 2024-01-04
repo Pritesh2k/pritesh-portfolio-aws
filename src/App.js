@@ -7,6 +7,8 @@ import About from './JS/About';
 import EmailIcon from '@mui/icons-material/Email';
 
 function App() {
+  const [activeLink, setActiveLink] = useState('about');
+
   useEffect(() => {
     const navCheckbox = document.getElementById('nav');
     const body = document.body;
@@ -74,23 +76,23 @@ function App() {
         </label>
         <div className="nav">
           <ul className="nav__items">
-            <li className="nav__item">
-              <a href="#about" className="nav__link" id="aboutLink">
+            <li className={`nav__item ${activeLink === 'about' ? 'active' : ''}`}>
+              <a href="#about" className="nav__link" id="aboutLink" onClick={() => setActiveLink('about')}>
                 About
               </a>
             </li>
-            <li className="nav__item">
-              <a href="#skills" className="nav__link" id="skillsLink">
+            <li className={`nav__item ${activeLink === 'skills' ? 'active' : ''}`}>
+              <a href="#skills" className="nav__link" id="skillsLink" onClick={() => setActiveLink('skills')}>
                 Skills
               </a>
             </li>
-            <li className="nav__item">
-              <a href="#portfolio" className="nav__link" id="portfolioLink">
+            <li className={`nav__item ${activeLink === 'portfolio' ? 'active' : ''}`}>
+              <a href="#portfolio" className="nav__link" id="portfolioLink" onClick={() => setActiveLink('portfolio')}>
                 Portfolio
               </a>
             </li>
             <li className="nav__item">
-              <a href="#contact" className="nav__link" id="contactLink">
+              <a href="#contact" className="nav__link" id="contactLink" onClick={() => setActiveLink('contact')}>
                 Contact
               </a>
             </li>
@@ -114,17 +116,12 @@ function App() {
             <Portfolio />
           </div>
         </section>
-        {/* <section className="contact" id="contact">
-          <div className="contact-container-wrapper">
-            <Contact/>
-          </div>
-        </section> */}
       </main>
 
       <footer className="footer" id="contact">
         <div className='footer-links'>
           <p>Get In Touch</p>
-          <a href='mailto:priteshparekh237@gmail.com'><EmailIcon fontSize='large'/></a>
+          <a href='mailto:priteshparekh237@gmail.com'><EmailIcon fontSize='large' /></a>
         </div>
       </footer>
     </>

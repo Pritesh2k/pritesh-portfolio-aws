@@ -9,6 +9,11 @@ import WorkIcon from '@mui/icons-material/Work';
 //import videodb
 import { videoDB } from '../config';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
+import Certificate from './Other Components/Certificate';
+
+import certificate1 from '../Assets/jp1.jpg';
+import certificate2 from '../Assets/jp2.jpg';
+import certificate3 from '../Assets/cyber.jpg';
 
 const skillsData = [
     {
@@ -37,7 +42,7 @@ const skillsData = [
         id: 4,
         icon: <EmojiEventsIcon fontSize='medium' />,
         categories: [
-            'Software Engingeering Job Simulation #1', 'Software Engingeering Job Simulation #2', 'Cybersecurity Virtual Experience Program'
+            certificate1, certificate2, certificate3
         ]
     }
 ];
@@ -174,7 +179,7 @@ function Skills() {
                             {index === 3 && (
                                 <div className='technical-skills-extra technical-shadow'>
                                     {item.categories.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>{skill}</div>
+                                        <div key={skillIndex}>{<Certificate image={skill}/>}</div>
                                     ))}
                                 </div>
                             )}
