@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../CSS/about.css'
 
 import GitHubIcon from '@mui/icons-material/GitHub';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -94,6 +94,7 @@ function About() {
                         </div>
                         <div className='left-side-links'>
                             <a href='https://github.com/Pritesh2k'><GitHubIcon fontSize='large' /></a>
+                            <a href='https://www.linkedin.com/in/pritesh-parekh2000/'><LinkedInIcon fontSize='large' /></a>
                         </div>
                         <div className='left-side-content'>
                             {currentDescription}

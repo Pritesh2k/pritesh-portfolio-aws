@@ -4,7 +4,7 @@ import Portfolio from './JS/Portfolio';
 import Skills from './JS/Skills';
 import Hero from './JS/Hero';
 import About from './JS/About';
-import Contact from './JS/Contact';
+import EmailIcon from '@mui/icons-material/Email';
 
 function App() {
   useEffect(() => {
@@ -114,15 +114,18 @@ function App() {
             <Portfolio />
           </div>
         </section>
-        <section className="contact" id="contact">
+        {/* <section className="contact" id="contact">
           <div className="contact-container-wrapper">
             <Contact/>
           </div>
-        </section>
+        </section> */}
       </main>
 
-      <footer className="footer">
-        <h1>Thanks For Visiting! 👋</h1>
+      <footer className="footer" id="contact">
+        <div className='footer-links'>
+          <p>Get In Touch</p>
+          <a href='mailto:priteshparekh237@gmail.com'><EmailIcon fontSize='large'/></a>
+        </div>
       </footer>
     </>
   );

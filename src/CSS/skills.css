@@ -1,4 +1,4 @@
-.skills-container {
+/* .skills-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -158,5 +158,247 @@
 
     .video-player{
         opacity: 0.6;
+    }
+} */
+
+
+/* update to css 2*/
+
+.scrollable-div {
+    overflow: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+/* Hide scrollbars for WebKit-based browsers (Chrome, Safari, etc.) */
+.scrollable-div::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.skill-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: 100%;
+    padding-top: 5rem;
+    gap: 0.5rem;
+
+    overflow-y: auto;
+}
+
+.skill-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    width: 4vw;
+    height: 4vw;
+    z-index: 5;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+
+.skill-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 20%;
+    height: 90%;
+}
+
+.skill-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 20%;
+
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.skill-card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80%;
+
+    border-bottom: 1.5px solid black;
+}
+
+.video-player{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    opacity: 0.8;
+    box-shadow: 0px 10px 20px 0px rgba(37, 37, 37, 0.219);
+}
+
+.technical-skills,
+.technical-skills-academic,
+.technical-skills-work,
+.technical-skills-extra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 1rem;
+    gap: 0.5rem;
+
+    color: rgba(37, 37, 37, 1.0);
+    background-color: white;
+}
+
+.technical-skills-academic{
+    font-size: 1.2rem;
+}
+
+.technical-skills-extra{
+    padding: 2rem;
+    gap: 0.75rem;
+}
+
+.technical-shadow{
+    box-shadow: 0px 10px 50px 0px rgba(139, 139, 139, 0.055);
+}
+
+@media screen and (max-width: 1610px){
+    .technical-skills,
+    .technical-skills-academic,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 1.25rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1045px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 1.2rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 903px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 1.2rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 0.8rem;
+    }
+
+    .technical-skills{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 779px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 1.1rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    .technical-skills{
+        font-size: 1rem;
+    }
+
+    .skill-icon{
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media screen and (max-width: 621px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 1rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 0.65rem;
+        gap: 0.4rem;
+    }
+
+    .skill-icon{
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media screen and (max-width: 528px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 0.9rem;
+    }
+
+    .technical-skills-academic{
+        font-size: 0.55rem;
+        gap: 0.4rem;
+    }
+
+    .skill-icon{
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .technical-skills,
+    .technical-skills-work,
+    .technical-skills-extra{
+        font-size: 0.7rem;
+        gap: 0.8rem
+    }
+
+    .technical-skills-academic{
+        font-size: 0.55rem;
+        gap: 0.4rem;
+    }
+
+    .skill-icon{
+        width: 8vw;
+        height: 8vw;
     }
 }
