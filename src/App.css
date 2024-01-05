@@ -84,6 +84,7 @@ body {
 }
 
 .header {
+  height: 40vh;
   background-color: var(--primary);
 }
 

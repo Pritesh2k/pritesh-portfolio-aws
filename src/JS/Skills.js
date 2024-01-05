@@ -20,22 +20,21 @@ const skillsData = [
         id: 1,
         icon: <TerminalIcon fontSize='medium' />,
         categories: [
-            'Python', 'JavaScript', 'Java', 'React.js',
-            'C#', 'R', 'HTML & CSS', 'Node.js', 'Git', 'Git CLI', 'Rest APIs - Configuration and Usage', 'Wire Shark Packet Monitoring'
+            'Python | R', 'Java | JavaScript | C#', 'React.js | Node.js', 'HTML5 | CSS', 'Command Line | Git | Git CLI', 'Rest APIs (Configuration and Usage)', 'Wire Shark Packet Monitoring'
         ]
     },
     {
         id: 2,
         icon: <SchoolIcon fontSize='medium' />,
         categories: [
-            'Software Engineering', 'Object Orientated Programming', 'Software Architecture', 'Development Cycles and Methodologies (Agile)', 'Data Analytics (Pandas)', 'Database Management (3NF Normalisation)', 'Data Structures', 'Unit Testing', 'Artificial Intelligence', 'Supervised & Unsupervised (K-Means, Classification and Neural Networks)', 'Cybersecurity - Threat Analysis, Risk Factors and Mitigation',
+            'Software Development', 'Software Management', 'Artificial Intelligence - Supervised & Unsupervised (K-Means, Classification and Neural Networks)', 'Cybersecurity - Vulnerability Detection, Threat Analysis, Risk Factors and Mitigation', 'Object Orientated Programming', 'Data Structures', 'Unit Testing', 'Software and Project Architecture', 'Development Cycles and Methodologies (Agile)', 'Data Analytics (Pandas)', 'Database Management (3NF Normalisation)',
         ]
     },
     {
         id: 3,
         icon: <WorkIcon fontSize='medium' />,
         categories: [
-            'Project Management', 'Project Architecture', 'Computational Thinker', 'Problem Solver', 'MS Office', 'Team Player'
+            'Collaboration - Software Implementation', 'Project Management Tools', 'Task Management', 'Computational Thinker', 'Analytical Skills', 'Problem Solver', 'Communication Skills', 'MS Office', 'Team Player'
         ]
     },
     {

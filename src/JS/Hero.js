@@ -40,14 +40,14 @@ function Hero() {
                         <span>o</span>
                     </div>
                 </div>
-                <div className="scroll-downs">
+                {/* <div className="scroll-downs">
                     <div className="mousey">
                         <div className="scroller"></div>
                     </div>
                     <div className='mouse-text'>
                         Scroll To Discover
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );

@@ -64,7 +64,7 @@ function App() {
         <div className="brand display__logo">
           <a href="#top" className="nav__link">
             {' '}
-            <span>Pritesh Parekh</span>
+            {/* <span>Pritesh Parekh</span> */}
           </a>
         </div>
 
