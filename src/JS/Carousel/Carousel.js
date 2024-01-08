@@ -3,9 +3,9 @@ import { Carousel as ReactCarousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../Carousel/carousel.css'
 
-import pandasIMG from '../../Assets/python.jpg';
 import crimeMap from '../../Assets/crime-map.png'
 import webdev from '../../Assets/webdev.jpg'
+import networkImg from '../../Assets/networkImg.jpg'
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -44,9 +44,18 @@ function Carousel() {
             image: crimeMap,
             title: 'Timely Crime Information Application',
             description: 'Built as my Finaly Year project at University, this system aims to provide crime information to users in a timely manner to help prevent people being a victim to crime - using a continuously updated dataset maintained by the Police force in England. This project was built using Android Studios and followed many research papers combining the best tips for crime prevention, personal saftey and crime detection. I followed an Agile approach utilising a Feature Driven methodology as well as attempting to make the system as real-time as possible using News API. The system included features such as: a Crime Map (rendering crimes pulled from the Police.Data API), Crime Prediction Model (using R packages and Random Forest), News APIs (based on the users locality) and an SOS System allowing users to call the police when in danger.',
-            year: '2023',
+            year: '2022',
             link: 'https://github.com/Pritesh2k/FinalYearProject',
             keywords: ['Android Studios', 'Java', 'R Packages', 'Random Forest', 'Agile - Feature Driven Methodology', 'APIs', 'Crime Map', 'Crime - Prediction', 'SOS Feature'],
+        },
+        {
+            id: 3,
+            image: networkImg,
+            title: 'TCP Packet Monitoring',
+            description: 'Configured a Client and Server class allowing communication between the two instances using Python sockets, utilising IPv4 addressing and TCP protocols. Monitored the packets being sent both ports using Wireshark - opensource packet analyser for networks - to gain a better understanding of how packets are sent under a TCP protocol.',
+            year: '2023',
+            link: 'https://github.com/Pritesh2k/SimplePythonServer',
+            keywords: ['Python', 'Sockets', 'IPv4', 'TCP Protocol', 'Wireshark'],
         },
     ];
 
