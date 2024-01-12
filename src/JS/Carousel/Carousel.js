@@ -101,7 +101,7 @@ function Carousel() {
                                             {item.keywords.join(' | ')} {/* Insert dynamic keywords */}
                                         </div>
                                         <div className='project-link'>
-                                            {item.link && <a href={item.link}>Link To Project</a>}
+                                            {item.link && <a className="text-hover" href={item.link}>Link To Project</a>}
                                         </div>
                                     </div>
                                 </div>
