@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import WordCloud from 'react-wordcloud';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
 import '../CSS/skills.css';
 
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -18,28 +21,32 @@ import certificate3 from '../Assets/cyber.jpg';
 const skillsData = [
     {
         id: 1,
-        icon: <TerminalIcon fontSize='medium' />,
+        Title: 'Technical',
+        icon: <TerminalIcon fontSize='large' />,
         categories: [
             'Python | R', 'Java | JavaScript | C#', 'React.js | Node.js', 'HTML5 | CSS', 'Command Line | Git | Git CLI', 'Rest APIs (Configuration and Usage)', 'Wire Shark Packet Monitoring'
         ]
     },
     {
         id: 2,
-        icon: <SchoolIcon fontSize='medium' />,
+        Title: 'Academic',
+        icon: <SchoolIcon fontSize='large' />,
         categories: [
             'Software Development', 'Software Management', 'Artificial Intelligence - Supervised & Unsupervised (K-Means, Classification and Neural Networks)', 'Cybersecurity - Vulnerability Detection, Threat Analysis, Risk Factors and Mitigation', 'Object Orientated Programming', 'Data Structures', 'Unit Testing', 'Software and Project Architecture', 'Development Cycles and Methodologies (Agile)', 'Data Analytics (Pandas)', 'Database Management (3NF Normalisation)',
         ]
     },
     {
         id: 3,
-        icon: <WorkIcon fontSize='medium' />,
+        Title: 'Work Place',
+        icon: <WorkIcon fontSize='large' />,
         categories: [
             'Collaboration - Software Implementation', 'Project Management Tools', 'Task Management', 'Computational Thinker', 'Analytical Skills', 'Problem Solver', 'Communication Skills', 'MS Office', 'Team Player'
         ]
     },
     {
         id: 4,
-        icon: <EmojiEventsIcon fontSize='medium' />,
+        Title: 'Certificates',
+        icon: <EmojiEventsIcon fontSize='large' />,
         categories: [
             certificate1, certificate2, certificate3
         ]
@@ -51,13 +58,14 @@ function Skills() {
     const [videoURL, setVideoURL] = useState([]);
     const [videoURLs, setVideoURLs] = useState({}); // Add this line
 
-    const [expandedCards, setExpandedCards] = useState(Array(skillsData.length).fill(false));
+    //const [expandedCards, setExpandedCards] = useState(Array(skillsData.length).fill(false));
 
-    const handleCardClick = (index) => {
-        const newExpandedCards = [...expandedCards];
-        newExpandedCards[index] = !newExpandedCards[index];
-        setExpandedCards(newExpandedCards);
-    };
+    const [currentDescription, setCurrentDescription] = useState('');
+    const [currentTitle, setCurrentTitle] = useState('');
+    function handleHeaderChange(index) {
+        setCurrentDescription(skillsData[index].categories);
+        setCurrentTitle(skillsData[index].Title)
+    }
 
     //for fetch videos firebase
     useEffect(() => {
@@ -92,100 +100,74 @@ function Skills() {
 
     return (
         <>
-            <div className='skill-card-container scrollable-div'>
-                {skillsData.map((item, index) => (
-                    <div key={index} className='skill-card'>
-                        {console.log(index)}
-                        <div className='skill-card-header'>
-                            <div className='skill-icon'>
-                                {item.icon}
+            <div className='skills-container-wrapper'>
+                <div className='left-skill-section'>
+                    {skillsData.map((item, index) => (
+                        <>
+                            <div key={index} className='skill-header' onClick={() => handleHeaderChange(index)}>
+                                <div className='skills-icon'>
+                                    {item.icon}
+                                </div>
+                                <div className='skills-video'>
+                                    {
+                                        videoURLs["terminal.mp4"] && (
+                                            index === 0 && (
+                                                <video autoPlay muted loop className='video-player'>
+                                                    <source src={videoURLs["terminal.mp4"]} type='video/mp4' />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )
+                                        )
+                                    }
+
+                                    {
+                                        videoURLs["graduation.mp4"] && (
+                                            index === 1 && (
+                                                <video autoPlay muted loop className='video-player'>
+                                                    <source src={videoURLs["graduation.mp4"]} type='video/mp4' />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )
+                                        )
+                                    }
+
+                                    {
+                                        videoURLs["corporate.mp4"] && (
+                                            index === 2 && (
+                                                <video autoPlay muted loop className='video-player'>
+                                                    <source src={videoURLs["corporate.mp4"]} type='video/mp4' />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )
+                                        )
+                                    }
+
+                                    {
+                                        videoURLs["trophy.mp4"] && (
+                                            index === 3 && (
+                                                <video autoPlay muted loop className='video-player'>
+                                                    <source src={videoURLs["trophy.mp4"]} type='video/mp4' />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )
+                                        )
+                                    }
+                                </div>
                             </div>
-                            {/* Videos */}
-                            {
-                                videoURLs["terminal.mp4"] && (
-                                    index === 0 && (
-                                        <video autoPlay muted loop className='video-player'>
-                                            <source src={videoURLs["terminal.mp4"]} type='video/mp4' />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    )
-                                )
-                            }
-
-                            {
-                                videoURLs["graduation.mp4"] && (
-                                    index === 1 && (
-                                        <video autoPlay muted loop className='video-player'>
-                                            <source src={videoURLs["graduation.mp4"]} type='video/mp4' />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    )
-                                )
-                            }
-
-                            {
-                                videoURLs["corporate.mp4"] && (
-                                    index === 2 && (
-                                        <video autoPlay muted loop className='video-player'>
-                                            <source src={videoURLs["corporate.mp4"]} type='video/mp4' />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    )
-                                )
-                            }
-
-                            {
-                                videoURLs["trophy.mp4"] && (
-                                    index === 3 && (
-                                        <video autoPlay muted loop className='video-player'>
-                                            <source src={videoURLs["trophy.mp4"]} type='video/mp4' />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    )
-                                )
-                            }
+                        </>
+                    ))}
+                </div>
+                <div className='right-skill-section'>
+                    <div className='skill-section-content'>
+                        <div className="title">
+                            {currentTitle}
                         </div>
-                        <div className='skill-card-body'>
-                            {/* Technical Skills CSS Apply */}
-                            {index === 0 && (
-                                <div className='technical-skills technical-shadow'>
-                                    {item.categories.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>{skill}</div>
-                                    ))}
-                                </div>
-                            )}
-
-                            {/* Academic Skills CSS Apply */}
-                            {index === 1 && (
-                                <div className='technical-skills-academic technical-shadow'>
-                                    {item.categories.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>{skill}</div>
-                                    ))}
-                                </div>
-                            )}
-
-                            {/* Work Skills CSS Apply */}
-                            {index === 2 && (
-                                <div className='technical-skills-work technical-shadow'>
-                                    {item.categories.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>{skill}</div>
-                                    ))}
-                                </div>
-                            )}
-
-
-                            {/* extra Skills CSS Apply */}
-                            {index === 3 && (
-                                <div className='technical-skills-extra technical-shadow'>
-                                    {item.categories.map((skill, skillIndex) => (
-                                        <div key={skillIndex}>{<Certificate image={skill}/>}</div>
-                                    ))}
-                                </div>
-                            )}
+                        <div className="content">
+                            {currentDescription[0]}
                         </div>
                     </div>
-                ))}
-            </div >
+                </div>
+            </div>
         </>
     );
 }

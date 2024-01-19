@@ -2,15 +2,18 @@ import React from 'react';
 import '../CSS/hero.css';
 
 import profilePic from '../Assets/Profile-pic.jpg'
+import background from '../Assets/background.jpg'
+import foreground from '../Assets/forground.jpg'
 
 function Hero() {
     return (
         <>
             <div className='hero-container'>
                 <div className='header-image-container'>
-                    <img className='header-image' src={profilePic} alt='image' />
+                    <img className='header-image' src={background} alt='image' />
                 </div>
                 <div className='hero-title-and-scroll-container'>
+                    <img className='profile-image' src={profilePic} alt='image' />
                     <div className='hero-main-title-container'>
                         <div className='h1-text'>
                             <span>W</span>
@@ -21,7 +24,7 @@ function Hero() {
                             <span>m</span>
                             <span>e</span>
                         </div>
-                        <div className='h1-text'>
+                        {/* <div className='h1-text'>
                             <span>T</span>
                             <span>o</span>
                         </div>
@@ -39,7 +42,7 @@ function Hero() {
                             <span>l</span>
                             <span>i</span>
                             <span>o</span>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="scroll-downs">
                         <div className="mousey">

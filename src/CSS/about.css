@@ -141,14 +141,14 @@
     position: absolute;
     z-index: 50;
     left: 43%;
-    height: 30%;
+    height: 10%;
 }
 
 .about-custom-arrow-next {
     position: absolute;
     z-index: 50;
     right: 43%;
-    height: 30%;
+    height: 10%;
 }
 
 .about-custom-arrow:hover {

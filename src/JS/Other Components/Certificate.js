@@ -1,11 +1,11 @@
-import React from 'react'
-import '../Other Components/certificate.css'
+import React from 'react';
 
-function Certificate({image}) {
-
+const Certificate = ({ imageUrl }) => {
   return (
-    <img className='certificate-container' src={image}/>
-  )
-}
+    <div className='certificate'>
+      <img src={imageUrl} alt='Certificate' />
+    </div>
+  );
+};
 
-export default Certificate
+export default Certificate;
