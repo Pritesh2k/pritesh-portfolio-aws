@@ -91,6 +91,7 @@ function Skills2() {
             setVideoURLs(videoURLs);
         });
     }, []);
+
     return (
         <>
             <div className='skills2-container'>

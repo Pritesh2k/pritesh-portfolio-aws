@@ -2,8 +2,6 @@ import React from 'react';
 import '../CSS/hero.css';
 
 import profilePic from '../Assets/Profile-pic.jpg'
-import background from '../Assets/background.jpg'
-import foreground from '../Assets/forground.jpg'
 
 function Hero() {
     return (
