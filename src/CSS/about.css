@@ -5,8 +5,6 @@
 
     width: 100%;
     height: 100%;
-
-    background-color: black;
 }
 
 .about-background-image{
@@ -170,6 +168,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+
     width: 40vw;
     height: 100vh;
     padding: 10rem;
@@ -216,197 +215,111 @@
     text-transform: uppercase;
 }
 
-@media only screen and (max-width: 1640px) {
-    .additional-info-container{
-        font-size: 1.5rem;
+@media screen and (max-width: 1024px) {
+    .about-carousel-title{
+        width: 40dvw;
+        height: 20dvh;
+        margin-top: -1rem;
     }
 
-    .left-side-content{
-        font-size: 1.2rem;
+    .additional-info-container{
+        width: 30dvw;
+        height: 10dvh;
+        font-size: 1.15rem;
+        margin-top: -2.5rem;
     }
 }
 
-@media only screen and (max-width: 1445px) {
-    .additional-info-container{
-        font-size: 1.25rem;
-    }
-
-    .left-side-content{
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1383px) {
-    .additional-info-container{
-        font-size: 1rem;
-    }
-
-    .left-side-content{
-        font-size: 1rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1248px) {
-    .additional-info-container{
-        font-size: 1rem;
+@media screen and (max-width: 412px) {
+    .above-img-container{
+        width: 100dvw;
+        height: 100dvh;
         flex-direction: column;
     }
 
-    .left-side-content{
-        font-size: 1rem;
+    .about-leftside-container{
+        width: 100dvw;
+        height: 70dvh;
     }
 
-    .about-carousel-keywords{
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1081px) {
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
-    }
-
-    .left-side-content{
-        font-size: 0.9rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
-    }
-
-    .left-side-content{
-        font-size: 0.8rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 799px) {
     .left-side-title{
+        width: 100dvw;
+        height: 15dvh;
+        padding-top: 4rem;
+        margin-top: 2rem;
+    }
+
+    .left-side-title p{
         font-size: 2rem;
-        height: 20%;
+        line-height: 2.5rem;
     }
 
     .left-side-title p span{
         font-size: 2rem;
     }
 
-    .about-carousel-title{
-        font-size: 2rem;
-    }
-
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
+    .left-side-links{
+        width: 100dvw;
+        height: 10dvh;
     }
 
     .left-side-content{
-        font-size: 0.8rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .left-side-title{
-        font-size: 2rem;
-        height: 20%;
-    }
-
-    .left-side-title p span{
-        font-size: 2rem;
-    }
-
-    .about-carousel-title{
-        font-size: 2rem;
-    }
-
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
-    }
-
-    .left-side-content{
-        font-size: 0.8rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 0.8rem;
-    }
-}
-
-@media only screen and (max-width: 615px) {
-    .left-side-title{
-        font-size: 2rem;
-        height: 10%;
-    }
-
-    .left-side-title p span{
-        font-size: 2rem;
-    }
-
-    .about-carousel-title{
-        font-size: 2rem;
-    }
-
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
-    }
-
-    .left-side-content{
-        font-size: 0.8rem;
-    }
-
-    .about-carousel-keywords{
-        font-size: 0.7rem;
-    }
-}
-
-@media only screen and (max-width: 593px) {
-    .left-side-title{
-        font-size: 2rem;
-        height: 10%;
-        margin-top: 6rem;
-    }
-
-    .left-side-title p span{
-        font-size: 2rem;
-    }
-
-    .about-carousel-title{
-        font-size: 1.5rem;
-    }
-
-    .additional-info-container{
-        font-size: 1rem;
-        flex-direction: column;
-    }
-
-    .left-side-content{
-        font-size: 0.8rem;
-    
-        height: 70%;
         overflow-y: auto;
+        font-size: 0.85rem;
+    }
+
+    .about-rightside-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100dvw;
+        height: 30dvh;
+    }
+
+    .about-carousel-slide{
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-carousel-image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-carousel-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100dvw;
+        height: 10dvh;
+        font-size: 1rem;
+        margin-top: 8rem;
+        padding-top: 2rem;
+    }
+
+    .additional-info-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100dvw;
+        height: 30dvh;
+        gap: 0.5rem;
+    }
+
+    .about-carousel-type,
+    .about-carousel-year{
+        font-size: 1rem;
+        margin-bottom: -2rem;
     }
 
     .about-carousel-keywords{
-        font-size: 0.8rem;
+        width: 100dvw;
+        height: 10dvh;
+        font-size: 0.85rem;
+        margin-bottom: 11rem;
     }
 }
