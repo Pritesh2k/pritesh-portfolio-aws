@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/animations/scale.css';
+// import 'tippy.js/dist/tippy.css';
+// import 'tippy.js/animations/scale.css';
 import '../CSS/skills.css';
 
 import TerminalIcon from '@mui/icons-material/Terminal';
