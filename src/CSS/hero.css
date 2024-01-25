@@ -33,12 +33,14 @@
 }
 
 .profile-image{
-  width: 25vw;
+  width: 15vw;
   border-radius: 50%;
 
-  animation: grow 2s ease-in forwards;
+  animation: grow 1.5s ease-in forwards;
 
-  box-shadow: rgba(0, 0, 0, 0.103) 0px 0px 8px 10px;
+  /* box-shadow: rgba(255, 255, 255, 0.11) 0px 0px 8px 10px; */
+
+  filter: blur(0);
 }
 
 @keyframes backgroundFilter {
@@ -65,6 +67,9 @@
   }
   100% {
     transform: scale(1);
+
+    box-shadow:  20px 20px 100px #bebebe2d,
+    -20px -20px 100px #ffffff5b;
   }
 }
 

@@ -10,7 +10,7 @@ function Hero() {
         <>
             <div className='hero-container'>
                 <div className='header-image-container'>
-                    <img className='header-image' src={background} alt='image' />
+                    {/* <img className='header-image' src={background} alt='image' /> */}
                 </div>
                 <div className='hero-title-and-scroll-container'>
                     <img className='profile-image' src={profilePic} alt='image' />

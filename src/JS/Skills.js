@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import WordCloud from 'react-wordcloud';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 import '../CSS/skills.css';
@@ -14,15 +13,11 @@ import { videoDB } from '../config';
 import { getDownloadURL, listAll, ref } from 'firebase/storage';
 import Certificate from './Other Components/Certificate';
 
-import certificate1 from '../Assets/jp1.jpg';
-import certificate2 from '../Assets/jp2.jpg';
-import certificate3 from '../Assets/cyber.jpg';
-
 const skillsData = [
     {
         id: 1,
         Title: 'Technical',
-        icon: <TerminalIcon fontSize='large' />,
+        icon: <TerminalIcon fontSize='medium' />,
         categories: [
             'Python | R', 'Java | JavaScript | C#', 'React.js | Node.js', 'HTML5 | CSS', 'Command Line | Git | Git CLI', 'Rest APIs (Configuration and Usage)', 'Wire Shark Packet Monitoring'
         ]
@@ -30,7 +25,7 @@ const skillsData = [
     {
         id: 2,
         Title: 'Academic',
-        icon: <SchoolIcon fontSize='large' />,
+        icon: <SchoolIcon fontSize='medium' />,
         categories: [
             'Software Development', 'Software Management', 'Artificial Intelligence - Supervised & Unsupervised (K-Means, Classification and Neural Networks)', 'Cybersecurity - Vulnerability Detection, Threat Analysis, Risk Factors and Mitigation', 'Object Orientated Programming', 'Data Structures', 'Unit Testing', 'Software and Project Architecture', 'Development Cycles and Methodologies (Agile)', 'Data Analytics (Pandas)', 'Database Management (3NF Normalisation)',
         ]
@@ -38,7 +33,7 @@ const skillsData = [
     {
         id: 3,
         Title: 'Work Place',
-        icon: <WorkIcon fontSize='large' />,
+        icon: <WorkIcon fontSize='medium' />,
         categories: [
             'Collaboration - Software Implementation', 'Project Management Tools', 'Task Management', 'Computational Thinker', 'Analytical Skills', 'Problem Solver', 'Communication Skills', 'MS Office', 'Team Player'
         ]
@@ -46,12 +41,30 @@ const skillsData = [
     {
         id: 4,
         Title: 'Certificates',
-        icon: <EmojiEventsIcon fontSize='large' />,
+        icon: <EmojiEventsIcon fontSize='medium' />,
         categories: [
-            certificate1, certificate2, certificate3
+            <Certificate />
         ]
     }
 ];
+
+const predefinedStyle = {
+    fontSize: '16px', // Your default font size
+    color: '#333', // Your default color
+
+};
+
+function getRandomStyle() {
+    const fontSize = Math.floor(Math.random() * 8) + 11; // Random font size between 10 and 30
+    const color = getRandomDarkerColor(); // Function to get a random color
+    const fontWeight = Math.random() < 0.5 ? 'normal' : 'bold'; // Randomly set font weight to normal or bold
+    return { fontSize: `${fontSize}px`, color, fontWeight };
+}
+
+function getRandomDarkerColor() {
+    const darkColors = ['#787878', '#646464', '#505050', '#3c3c3c', '#282828', '#141414', '#000000', '#0d0d0d', '#1a1a1a']; // Add more darker colors if needed
+    return darkColors[Math.floor(Math.random() * darkColors.length)];
+}
 
 function Skills() {
     //for fetch videos firebase
@@ -104,11 +117,13 @@ function Skills() {
                 <div className='left-skill-section'>
                     {skillsData.map((item, index) => (
                         <>
-                            <div key={index} className='skill-header' onClick={() => handleHeaderChange(index)}>
-                                <div className='skills-icon'>
-                                    {item.icon}
-                                </div>
-                                <div className='skills-video'>
+                            <div key={index} className='skill-header'>
+                                <div className='skill-header-left'>
+                                    <div className='skills-icon'>
+                                        <div className='icon'>
+                                            {item.icon}
+                                        </div>
+                                    </div>
                                     {
                                         videoURLs["terminal.mp4"] && (
                                             index === 0 && (
@@ -153,19 +168,23 @@ function Skills() {
                                         )
                                     }
                                 </div>
+                                <div className='skill-header-right'>
+                                    <div className='title'>
+                                        {item.Title}
+                                    </div>
+                                    <div className='content'>
+                                        {item.categories.map((category, index) => (
+                                            <span key={index} style={index === 1 ? getRandomStyle() : index === 2 || index === 3 ? predefinedStyle : null}>
+                                                <div className='skil-border'>
+                                                    {category}
+                                                </div>
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </>
                     ))}
-                </div>
-                <div className='right-skill-section'>
-                    <div className='skill-section-content'>
-                        <div className="title">
-                            {currentTitle}
-                        </div>
-                        <div className="content">
-                            {currentDescription[0]}
-                        </div>
-                    </div>
                 </div>
             </div>
         </>

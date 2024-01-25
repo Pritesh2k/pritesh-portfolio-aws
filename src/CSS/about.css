@@ -12,8 +12,7 @@
 .about-background-image{
     width: 100%;
     height: 100%;
-
-    opacity: 0.5;
+    filter: contrast(140%) brightness(45%);
 }
 
 .above-img-container{
@@ -138,21 +137,32 @@
 }
 
 .about-custom-arrow-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute;
     z-index: 50;
-    left: 43%;
+    left: 43.25%;
     height: 10%;
+    width: 2vw;
 }
 
 .about-custom-arrow-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute;
     z-index: 50;
-    right: 43%;
+    right: 43.25%;
     height: 10%;
+    width: 2vw;
 }
 
 .about-custom-arrow:hover {
     color: #ff0000;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .about-carousel-image-container{

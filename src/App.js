@@ -5,6 +5,7 @@ import Skills from './JS/Skills';
 import Hero from './JS/Hero';
 import About from './JS/About';
 import EmailIcon from '@mui/icons-material/Email';
+import Skills2 from './JS/Skills2';
 
 function App() {
   const [activeLink, setActiveLink] = useState('about');
@@ -108,7 +109,7 @@ function App() {
         </section>
         <section className="portfolio" id="skills">
           <div className="skills-container-wrapper">
-            <Skills />
+            <Skills2 />
           </div>
         </section>
         <section className="portfolio" id="portfolio">
