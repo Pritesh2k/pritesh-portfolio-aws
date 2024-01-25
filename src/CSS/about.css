@@ -323,7 +323,8 @@
     .about-carousel-keywords{
         width: 100dvw;
         height: 10dvh;
-        font-size: 0.85rem;
+        padding: 1rem;
+        font-size: 0.7rem;
         margin-bottom: 11rem;
     }
 

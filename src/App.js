@@ -127,6 +127,7 @@ function App() {
           <p>Get In Touch</p>
           <div className='foot-line'/>
           <a href='mailto:priteshparekh237@gmail.com'><EmailIcon fontSize='large' /></a>
+          <div className='notice'>NOTICE: Although the PC and Laptop version of this application is suitable for deployment, bugs and styling issues may be apparent <br/> for Mobiles and Tablets. Please note that these existing issues and bugs will be fixed</div>
         </div>
       </footer>
     </>

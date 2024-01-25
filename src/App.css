@@ -181,6 +181,15 @@ body {
   color: var(--secondary);
 }
 
+.notice{
+  font-size: 0.8rem;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  position: relative;
+  transform: translateY(190%);
+}
+
 @media (min-width: 800px) {
 
   .navbar,
