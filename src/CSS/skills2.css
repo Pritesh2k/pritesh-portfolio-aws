@@ -167,6 +167,12 @@
     transition: all 0.75s ease-in-out;
 }
 
+.mobile-overlay{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
 @media only screen and (max-width: 412px) {
     .skills2-container {
         flex-direction: column;
@@ -186,6 +192,7 @@
     
         width: 90vw;
         height: 22.25vh;
+        opacity: 1;
     
         position: absolute;
         z-index: 101; /* Increase the z-index */
