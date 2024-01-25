@@ -422,5 +422,14 @@ body {
   }
   .foot-line{
     width: 50%;
+    position: relative;
+    transform: translateY(-500%);
+  }
+
+  .notice{
+    padding: 1rem;
+    position:relative;
+    transform: translateY(0);
+    background-color: #b30000;
   }
 }
