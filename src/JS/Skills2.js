@@ -18,9 +18,34 @@ function getRandomStyle() {
     return { fontSize: `${fontSize}rem`, color, fontWeight };
 }
 
+function mobileRandomStyle() {
+    const fontSize = Math.floor(Math.random() * 0.4) + 0.8; // Random font size between 10 and 30
+    const color = getRandomDarkerColor(); // Function to get a random color
+    const fontWeight = Math.random() < 0.5 ? 'normal' : 'bold'; // Randomly set font weight to normal or bold
+    return { fontSize: `${fontSize}rem`, color, fontWeight };
+}
+
+function mobileRandomStyle_adjusted() {
+    const fontSize = Math.floor(Math.random() * 0.4) + 0.5; // Random font size between 10 and 30
+    const color = getRandomDarkerColor(); // Function to get a random color
+    const fontWeight = Math.random() < 0.5 ? 'normal' : 'bold'; // Randomly set font weight to normal or bold
+    return { fontSize: `${fontSize}rem`, color, fontWeight };
+}
+
+function mobileRandomStyle_adjusted2() {
+    const fontSize = Math.floor(Math.random() * 0.4) + 0.7; // Random font size between 10 and 30
+    const color = getRandomDarkerColor(); // Function to get a random color
+    const fontWeight = Math.random() < 0.5 ? 'normal' : 'bold'; // Randomly set font weight to normal or bold
+    return { fontSize: `${fontSize}rem`, color, fontWeight };
+}
+
 function getRandomDarkerColor() {
     const darkColors = ['#787878', '#646464', '#505050', '#3c3c3c', '#282828', '#141414', '#000000', '#0d0d0d', '#1a1a1a']; // Add more darker colors if needed
     return darkColors[Math.floor(Math.random() * darkColors.length)];
+}
+
+function activateSkillContent(skillType) {
+    alert(`clicked: ${skillType}`)
 }
 
 function Skills2() {
@@ -92,10 +117,45 @@ function Skills2() {
         });
     }, []);
 
+    useEffect(() => {
+        // Add an event listener to the button
+        const button = document.getElementById('skillButton');
+
+        if (button) {
+            button.addEventListener('click', () => {
+                activateSkillContent('Test');
+            });
+        }
+
+        // Remove the event listener when the component unmounts
+        return () => {
+            if (button) {
+                button.removeEventListener('click', () => {
+                    activateSkillContent('Test');
+                });
+            }
+        };
+    }, []); // Empty dependency array to run the effect only once on mount
+
     return (
         <>
             <div className='skills2-container'>
                 <div className='skills2-skill-card'>
+                    <div className='mobile-overlay'>
+                        <div className='skilss2-title-content'>
+                            {skillsData[0].Title}
+                            <div className='skills2-line' />
+                        </div>
+                        <div className='skill2-content'>
+                            {skillsData.map((item, index) => (
+                                index === 0 && (
+                                    <div className='keyword-background'>{item.categories.map((keyword) => (
+                                        <div style={mobileRandomStyle()}>{keyword}</div>
+                                    ))}</div>
+                                )
+                            ))}
+                        </div>
+                    </div>
                     <div className='skill2-cover'>
                         {
                             videoURLs["terminal.mp4"] && (
@@ -125,6 +185,22 @@ function Skills2() {
                 </div>
 
                 <div className='skills2-skill-card'>
+                    <div className='mobile-overlay'>
+                        <div className='skilss2-title-content'>
+                            {skillsData[1].Title}
+                            <div className='skills2-line' />
+                        </div>
+                        <div className='skill2-content'>
+                            {skillsData.map((item, index) => (
+                                index === 1 && (
+                                    <div className='keyword-background'>{item.categories.map((keyword) => (
+                                        <div style={mobileRandomStyle_adjusted()}>{keyword}</div>
+                                    ))}</div>
+                                )
+                            ))}
+                        </div>
+                    </div>
+
                     <div className='skill2-cover'>
                         {
                             videoURLs["graduation.mp4"] && (
@@ -154,6 +230,22 @@ function Skills2() {
                 </div>
 
                 <div className='skills2-skill-card'>
+                    <div className='mobile-overlay'>
+                        <div className='skilss2-title-content'>
+                            {skillsData[2].Title}
+                            <div className='skills2-line' />
+                        </div>
+                        <div className='skill2-content'>
+                            {skillsData.map((item, index) => (
+                                index === 2 && (
+                                    <div className='keyword-background'>{item.categories.map((keyword) => (
+                                        <div style={mobileRandomStyle_adjusted2()}>{keyword}</div>
+                                    ))}</div>
+                                )
+                            ))}
+                        </div>
+                    </div>
+
                     <div className='skill2-cover'>
                         {
                             videoURLs["corporate.mp4"] && (
@@ -183,6 +275,7 @@ function Skills2() {
                 </div>
 
                 <div className='skills2-skill-card'>
+
                     <div className='skill2-cover'>
                         {
                             videoURLs["trophy.mp4"] && (

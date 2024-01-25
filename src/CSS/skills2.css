@@ -178,7 +178,56 @@
         height: 25vh;
     }
 
-    /* .skills2-skill-card:active {
-        width: 0vw;
-    } */
+    .mobile-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        width: 90vw;
+        height: 22.25vh;
+    
+        position: absolute;
+        z-index: 101; /* Increase the z-index */
+        background-color: rgba(255, 255, 255, 0.623);
+        box-shadow: 20px 20px 60px #bebebe31,
+        -20px -20px 60px #ffffff4b;
+    }
+
+    .mobile-overlay .skilss2-title-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        height: 25%;
+        opacity: 1;
+        gap: 0;
+        z-index: 101; /* Increase the z-index */
+        background-color: inherit;
+    }
+
+    .mobile-overlay .skills2-line{
+        width: 70%;
+        height: 2px;
+    }
+
+    .mobile-overlay .skill2-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        height: 75%;
+        opacity: 1;
+        
+        background-color: inherit;
+    }
+
+    .mobile-overlay .keyword-background{
+        box-shadow: none;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    
 }
