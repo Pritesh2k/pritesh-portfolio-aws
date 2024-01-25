@@ -42,6 +42,7 @@ body {
   margin: 0;
 
   scroll-snap-type: y mandatory;
+  background-color: rgba(37, 37, 37, 1.0);
 }
 
 .header,
@@ -79,7 +80,7 @@ body {
 }
 
 .footer {
-  height: 20vh;
+  height: 40vh;
   background-color: var(--primary);
 }
 
@@ -143,6 +144,13 @@ body {
   padding: 10px 15px;
   text-align: center;
   display: block;
+}
+
+.foot-line{
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  background-color: #ff0000;
 }
 
 .logo {
@@ -391,7 +399,7 @@ body {
 }
 
 .footer-links a{
-  color: rgb(212, 116, 116);
+  color: rgb(255, 255, 255);
 }
 
 .footer-links a:hover{

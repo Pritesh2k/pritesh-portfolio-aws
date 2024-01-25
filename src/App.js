@@ -122,6 +122,7 @@ function App() {
       <footer className="footer" id="contact">
         <div className='footer-links'>
           <p>Get In Touch</p>
+          <div className='foot-line'/>
           <a href='mailto:priteshparekh237@gmail.com'><EmailIcon fontSize='large' /></a>
         </div>
       </footer>
