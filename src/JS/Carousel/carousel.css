@@ -73,7 +73,7 @@
 .carousel-context-title-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 20%;
 }
@@ -107,7 +107,7 @@
     padding: 1rem;
     font-size: 1.25vw;
     line-height: 4vh;
-    text-align: justify;
+    text-align: center;
     color: white;
 }
 
@@ -187,30 +187,79 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 412px) {
     .custom-arrow-prev,    
     .custom-arrow-next {
         z-index: 1000;
     }
 
-    .carousel-context-title{}
+    .carousel-context-title-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 95dvw;
+        height: 20dvh;
+
+        padding: 0;
+        margin-top: -8rem;
+    }
+
+    .carousel-context-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 70%;
+
+        padding-top: 1.25rem;
+    }
+
     .carousel-context-date{
-        font-size: 2rem;
+        justify-content: center;
+        width: 100%;
+        height: 30%;
     }
 
-    .carousel-contect-text {
-        font-size: 2.5vw;
-        line-height: 2.25vh;
+    .carousel-contect-text{
+        line-height: 1.15rem;
+        font-size: 1rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
     }
 
-    .carousel-keywords {
-        font-size: 2.5vw;
+    .carousel-keywords-link-container{
+        flex-direction: column;
+        position: absolute;
+        width: 90dvw;
+        height: 20dvh;
+        transform: translateY(175%);
+    }
+
+    .carousel-keywords{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 40%;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.15rem;
+    }
+
+    .project-link{
+        width: 80%;
+        position: absolute;
+        z-index: 9999;
+
+        transform: translateY(100%);
+    }
+
+    .project-link a{
+        font-size: 1.15rem;
         color: white;
-    }
-
-    .project-link a {
-        text-decoration: none;
-        font-size: 2.5vw;
-        color: rgb(204, 204, 204);
     }
 }

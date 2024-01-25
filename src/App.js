@@ -9,14 +9,17 @@ import Skills2 from './JS/Skills2';
 
 function App() {
   const [activeLink, setActiveLink] = useState('about');
+  const [mainOpacity, setMainOpacity] = useState(1);
 
   useEffect(() => {
     const navCheckbox = document.getElementById('nav');
-    const body = document.body;
+    const mainElement = document.querySelector('main');
 
     const handleClick = () => {
       // Toggle the "nav-open" class on the body
-      body.classList.toggle('nav-open', navCheckbox.checked);
+      const isOpen = navCheckbox.checked;
+      mainElement.style.opacity = isOpen ? 0 : 1;
+      setMainOpacity(isOpen ? 0 : 1);
     };
 
     if (navCheckbox) navCheckbox.addEventListener('change', handleClick);
@@ -101,7 +104,7 @@ function App() {
         </div>
       </nav>
 
-      <main>
+      <main style={{ opacity: mainOpacity }}>
         <section className="portfolio" id="about">
           <div className="about-container-wrapper">
             <About />

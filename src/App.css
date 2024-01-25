@@ -406,3 +406,12 @@ body {
   color: rgb(211, 55, 55);
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 412px) {
+  .footer-links p{
+    font-size: 1.5rem;
+  }
+  .foot-line{
+    width: 50%;
+  }
+}
