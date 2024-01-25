@@ -298,6 +298,44 @@
   transition: all 0.3s ease-in-out;
 }
 
+.first{
+  margin-right: -100rem;
+
+  animation: load-in 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.second{
+  margin-right: -100rem;
+  
+  animation: load-in 1s ease-in-out forwards;
+  animation-delay: 1.25s;
+}
+
+.third{
+  margin-right: -100rem;
+
+  animation: load-in 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.fourth{
+  margin-right: -100rem;
+
+  animation: load-in 1s ease-in-out forwards;
+  animation-delay: 1.75s;
+}
+
+@keyframes load-in {
+  0%{
+    margin-right: -100rem;
+  }
+
+  100%{
+    margin-right: 0;
+  }
+}
+
 .jump-to-line{
   width: 0%;
   height: 2px;

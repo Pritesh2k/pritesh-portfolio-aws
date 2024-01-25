@@ -62,7 +62,7 @@ function Hero() {
                 </div>
                 <div className='jump-to'>
                     <ul className='jump-to-list'>
-                        <li className='jump-to-item'>
+                        <li className='jump-to-item first'>
                             <div className={`${activeLink === 'about' ? 'active' : ''}`}>
                                 <a href="#about" className="nav__link" id="aboutLink" onClick={() => setActiveLink('about')}>
                                     About
@@ -70,7 +70,7 @@ function Hero() {
                             </div>
                             <div className='jump-to-line' />
                         </li>
-                        <li className='jump-to-item' href="#skills">
+                        <li className='jump-to-item second'>
                             <div className={`${activeLink === 'skills' ? 'active' : ''}`}>
                                 <a href="#skills" className="nav__link" id="skillsLink" onClick={() => setActiveLink('skills')}>
                                     Skills
@@ -78,7 +78,7 @@ function Hero() {
                             </div>
                             <div className='jump-to-line' />
                         </li>
-                        <li className='jump-to-item'>
+                        <li className='jump-to-item third'>
                             <div className={`${activeLink === 'portfolio' ? 'active' : ''}`}>
                                 <a href="#portfolio" className="nav__link" id="portfolioLink" onClick={() => setActiveLink('portfolio')}>
                                     Portfolio
@@ -86,7 +86,7 @@ function Hero() {
                             </div>
                             <div className='jump-to-line' />
                         </li>
-                        <li className='jump-to-item'>
+                        <li className='jump-to-item fourth'>
                             <div className={`${activeLink === 'contact' ? 'active' : ''}`}>
                                 <a href="#contact" className="nav__link" id="contactLink" onClick={() => setActiveLink('contact')}>
                                     Contact
