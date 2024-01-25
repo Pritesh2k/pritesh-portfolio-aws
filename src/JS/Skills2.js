@@ -137,6 +137,11 @@ function Skills2() {
         };
     }, []); // Empty dependency array to run the effect only once on mount
 
+    const handleCertButtonClick = () => {
+        // Logic to handle the cert button click
+        alert('Clicked on Cert Button!');
+    };
+
     return (
         <>
             <div className='skills2-container'>
@@ -276,6 +281,20 @@ function Skills2() {
 
                 <div className='skills2-skill-card'>
 
+                    <div className='mobile-overlay'>
+                        <div className='skilss2-title-content'>
+                            {skillsData[3].Title}
+                            <div className='skills2-line' />
+                        </div>
+                        <div className='skill2-content'>
+                            <div className='skills2-content-cert'>
+                                <div>JP Morgan 1</div>
+                                <div>JP Morgan 2</div>
+                                <div>MasterCard</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className='skill2-cover'>
                         {
                             videoURLs["trophy.mp4"] && (
@@ -286,6 +305,7 @@ function Skills2() {
                             )
                         }
                     </div>
+
                     <div className='skills2-title'>
                         <div className='skilss2-title-content'>
                             {skillsData[3].Title}

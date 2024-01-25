@@ -92,7 +92,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center vertically */
     position: relative;
     z-index: 100;
     width: 100%;
@@ -179,6 +178,20 @@
     background-color: red;
 }
 
+.cert-button {
+    width: 0; /* Adjust width as needed */
+    height: 0; /* Adjust height as needed */
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    position: relative; /* Ensure relative positioning */
+    z-index: 9999; /* Ensure it's above other elements */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: all 0.3s ease; /* Add transition effect */
+    opacity: 0;
+}
+
+
 @media only screen and (max-width: 412px) {
     .skills2-container {
         flex-direction: column;
@@ -241,6 +254,30 @@
         box-shadow: none;
         text-align: center;
         padding-bottom: 2rem;
+    }
+
+    .mobile-overlay .skill2-content{
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 999;
+    }
+
+    .cert-button{
+        width: 80dvw;
+        height: 10dvh;
+        opacity: 1;
+        transform: translateY(600%);
+    }
+
+    .skill2-content .skills2-content-cert{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
     }
     
 }
