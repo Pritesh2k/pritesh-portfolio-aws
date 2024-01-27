@@ -10,6 +10,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import aboutBG from '../Assets/aboutBG.jpg'
+import ScrollDownButton from './Other Components/ScrollDownButton';
 
 function About() {
 
@@ -86,13 +87,13 @@ function About() {
     return (
         <>
             <div className='about-container-wrapper'>
-
+                {/* <ScrollDownButton /> */}
                 <img className='about-background-image' src={aboutBG} />
                 <div className='above-img-container'>
 
                     <div className='about-leftside-container'>
                         <div className='left-side-title'>
-                            <p>Hello<span>,</span> <br/> I<span>'</span>m Pritesh<span>.</span></p>
+                            <p>Hello<span>,</span> <br /> I<span>'</span>m Pritesh<span>.</span></p>
                         </div>
                         <div className='left-side-links'>
                             <a href='https://github.com/Pritesh2k'><GitHubIcon fontSize='large' /></a>

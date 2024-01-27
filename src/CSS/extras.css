@@ -1,0 +1,115 @@
+/* Carousel */
+.extras-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #0056b3;
+}
+
+.extras-wrapper{
+    width: 50%;
+    background-color: aqua;
+}
+.extras-carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    margin-top: 7vh;
+    background-color: rgb(248, 248, 248);
+}
+
+.extras-content {
+    max-width: 50%; /* Adjust as needed */
+    max-height: 100%;
+    text-align: center;
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.extras-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.extras-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-right: 8px;
+    color: #555;
+    font-style: italic;
+}
+
+.extras-content a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.extras-content img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 2vw;
+    height: 4vw;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.extras-content a:hover {
+    background-color: #0056b3;
+}
+
+.keyword {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+/* Custom arrows */
+.extras-custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #ff00006e;
+    border: none;
+    padding: 2vw;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.extras-custom-arrow-prev {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+}
+
+.extras-custom-arrow-next {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+}
+
+.showcase-extras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background-color: #4277af;
+}

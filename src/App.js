@@ -6,6 +6,7 @@ import Hero from './JS/Hero';
 import About from './JS/About';
 import EmailIcon from '@mui/icons-material/Email';
 import Skills2 from './JS/Skills2';
+import Extras from './JS/Extras';
 
 function App() {
   const [activeLink, setActiveLink] = useState('about');
@@ -36,6 +37,7 @@ function App() {
     const aboutLink = document.getElementById('aboutLink');
     const skillsLink = document.getElementById('skillsLink');
     const portfolioLink = document.getElementById('portfolioLink');
+    const extrasLink = document.getElementById('extrasLink');
     const contactLink = document.getElementById('contactLink');
 
     const handleClick = () => {
@@ -45,6 +47,7 @@ function App() {
     if (aboutLink) aboutLink.addEventListener('click', handleClick);
     if (skillsLink) skillsLink.addEventListener('click', handleClick);
     if (portfolioLink) portfolioLink.addEventListener('click', handleClick);
+    if (extrasLink) extrasLink.addEventListener('click', handleClick);
     if (contactLink) contactLink.addEventListener('click', handleClick);
 
     // Cleanup event listeners on component unmount
@@ -52,6 +55,7 @@ function App() {
       if (aboutLink) aboutLink.removeEventListener('click', handleClick);
       if (skillsLink) skillsLink.removeEventListener('click', handleClick);
       if (portfolioLink) portfolioLink.removeEventListener('click', handleClick);
+      if (extrasLink) extrasLink.removeEventListener('click', handleClick);
       if (contactLink) contactLink.removeEventListener('click', handleClick);
     };
   }, []);
@@ -95,6 +99,11 @@ function App() {
                 Portfolio
               </a>
             </li>
+            <li className={`nav__item ${activeLink === 'extras' ? 'active' : ''}`}>
+              <a href="#extras" className="nav__link" id="extrasLink" onClick={() => setActiveLink('extras')}>
+                Extras
+              </a>
+            </li>
             <li className="nav__item">
               <a href="#contact" className="nav__link" id="contactLink" onClick={() => setActiveLink('contact')}>
                 Contact
@@ -118,6 +127,11 @@ function App() {
         <section className="portfolio" id="portfolio">
           <div className="portfolio-container-wrapper">
             <Portfolio />
+          </div>
+        </section>
+        <section className="extras" id="extras">
+          <div className="extras-container-wrapper">
+            <Extras />
           </div>
         </section>
       </main>

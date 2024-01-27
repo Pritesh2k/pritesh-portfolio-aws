@@ -1,0 +1,123 @@
+.about-scroll-down-button-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transform: translate(125%, 1450%);
+    overflow: hidden;
+
+    width: 3dvw;
+    height: 3dvw;
+    border-radius: 50%;
+    border: #ff0000 2px solid;
+
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.11);
+
+    animation: border-pulse 2.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.about-scroll-down-button-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 999;
+    top: 00;
+    left: 0;
+    transform: translate(15%, 1450%);
+    overflow: hidden;
+
+    width: 3dvw;
+    height: 3dvw;
+    border-radius: 50%;
+    border: #ca3939 2px solid;
+
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.11);
+
+    animation: border-pulse 2.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes border-pulse {
+    0%{
+        border: #ca39399c 2px solid;
+    }
+
+    50%{
+        border: #ca3939 2px solid;
+    }
+
+    100%{
+        border: #ca39399c 2px solid;
+    }
+}
+
+.about-down-arrow-icon-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 50%;
+    transform: translateY(-150%);
+    opacity: 0;
+
+    animation: about-arrow-enter 2.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes about-arrow-enter {
+    0% {
+        opacity: 1;
+        transform: translateY(-150%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+    70%, 99%{
+        transform: translateY(150%);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.about-down-arrow-icon-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 50%;
+    transform: translateY(150%);
+    opacity: 0;
+
+    animation: about-arrow-enter-up 2.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes about-arrow-enter-up {
+    0% {
+        opacity: 1;
+        transform: translateY(150%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+    70%, 99%{
+        transform: translateY(-150%);
+    }
+    100% {
+        opacity: 0;
+    }
+}

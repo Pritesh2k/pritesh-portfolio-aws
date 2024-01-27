@@ -52,6 +52,10 @@ body {
   height: 100vh;
 }
 
+.extras{
+  height: 60vh;
+}
+
 .header,
 .home,
 .about,
@@ -371,6 +375,14 @@ body {
   align-items: center;
 
   height: 100vh;
+}
+
+.extras-container-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60vh;
 }
 
 .contact-container-wrapper {

@@ -12,6 +12,7 @@ function Hero() {
         const aboutLink = document.getElementById('aboutLink');
         const skillsLink = document.getElementById('skillsLink');
         const portfolioLink = document.getElementById('portfolioLink');
+        const extrasLink = document.getElementById('extrasLink');
         const contactLink = document.getElementById('contactLink');
 
         const handleClick = () => {
@@ -21,6 +22,7 @@ function Hero() {
         if (aboutLink) aboutLink.addEventListener('click', handleClick);
         if (skillsLink) skillsLink.addEventListener('click', handleClick);
         if (portfolioLink) portfolioLink.addEventListener('click', handleClick);
+        if (extrasLink) extrasLink.addEventListener('click', handleClick);
         if (contactLink) contactLink.addEventListener('click', handleClick);
 
         // Cleanup event listeners on component unmount
@@ -28,6 +30,7 @@ function Hero() {
             if (aboutLink) aboutLink.removeEventListener('click', handleClick);
             if (skillsLink) skillsLink.removeEventListener('click', handleClick);
             if (portfolioLink) portfolioLink.removeEventListener('click', handleClick);
+            if (extrasLink) extrasLink.removeEventListener('click', handleClick);
             if (contactLink) contactLink.removeEventListener('click', handleClick);
         };
     }, []);
@@ -87,6 +90,14 @@ function Hero() {
                             <div className='jump-to-line' />
                         </li>
                         <li className='jump-to-item fourth'>
+                            <div className={`${activeLink === 'extras' ? 'active' : ''}`}>
+                                <a href="#extras" className="nav__link" id="extrasLink" onClick={() => setActiveLink('extras')}>
+                                    Extras
+                                </a>
+                            </div>
+                            <div className='jump-to-line' />
+                        </li>
+                        <li className='jump-to-item fifth'>
                             <div className={`${activeLink === 'contact' ? 'active' : ''}`}>
                                 <a href="#contact" className="nav__link" id="contactLink" onClick={() => setActiveLink('contact')}>
                                     Contact
