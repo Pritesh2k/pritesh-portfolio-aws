@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 .projects-container{
     display: flex;
     justify-content: center;
@@ -5,4 +7,43 @@
 
     width: 100vw;
     height: 100vh;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 30%;
+    height: 100%;
+    gap: 0.5em;
+
+    animation: intro-right 1.25s ease-in-out forwards;
+
+    color: white;
+    background-color: rgb(27, 27, 27);
+}
+
+.projects-subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 70%;
+    height: 100%;
+
+    transform: translateY(100vw);
+    animation: intro-left 1.25s ease-in-out forwards;
+
+    background-color: rgb(240, 240, 240);
+}
+
+.projects-title{
+    font-family: "Lora", serif;
+    font-size: 3em;
+    text-transform: uppercase;
+
+    color: red;
 }

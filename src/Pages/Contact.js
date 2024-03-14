@@ -4,7 +4,12 @@ import '../CSS/contact.css'
 function Contact() {
   return (
     <div className='contact-container'>
-      Contact
+      <div className='contact-subheader'>
+        <div className='contact-title'>Contact</div>
+      </div>
+      <div className='contact-header'>
+
+      </div>
     </div>
   )
 }

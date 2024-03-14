@@ -55,7 +55,7 @@
 
 .link-title {
     font-family: "Lora", serif;
-    font-size: 6em;
+    font-size: 4em;
     text-transform: uppercase;
 
     transform: rotateX(90deg);
@@ -95,7 +95,7 @@
     }
 
     100% {
-        width: 90%;
+        width: 70%;
         box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);
     }
 }
@@ -440,12 +440,12 @@
     opacity: 1;
     
     animation: text-enter 1s ease-in-out forwards;
-    /* Visible when aboutOpen is true */
+    animation-delay: 0.3s;
 }
 
 @keyframes text-enter {
     0% {
-        transform: scale(0);
+        transform: scale(0.5);
     }
 
     100% {

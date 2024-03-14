@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-.contact-container{
+.about-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,13 +9,13 @@
     height: 100vh;
 }
 
-.contact-header {
+.about-header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    width: 70%;
+    width: 30%;
     height: 100%;
     gap: 0.5em;
 
@@ -25,13 +25,13 @@
     background-color: rgb(27, 27, 27);
 }
 
-.contact-subheader {
+.about-subheader {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    width: 30%;
+    width: 70%;
     height: 100%;
 
     transform: translateY(100vw);
@@ -40,8 +40,10 @@
     background-color: rgb(240, 240, 240);
 }
 
-.contact-title{
+.about-title{
     font-family: "Lora", serif;
     font-size: 3em;
     text-transform: uppercase;
+
+    color: red;
 }

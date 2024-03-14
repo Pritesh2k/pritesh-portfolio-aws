@@ -11,20 +11,20 @@ import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 function Home() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
-  const [aboutTextVisible, setAboutTextVisible] = useState(false); // Set initial visibility
+  const [aboutTextVisible, setAboutTextVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAboutOpen(false);
       setInitialLoad(false);
-    }, 9000); // Delayed appearance after 8 seconds
+    }, 9000);
 
-    return () => clearTimeout(timer); // Cleanup function
-  }, []); // Empty dependency array to run only once
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleAbout = () => {
     setAboutOpen(!aboutOpen);
-    setAboutTextVisible(!aboutTextVisible); // Toggle visibility
+    setAboutTextVisible(!aboutTextVisible);
   };
 
   return (

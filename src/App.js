@@ -7,6 +7,7 @@ import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import About from './Pages/About';
 
 function App() {
   const mainContainerRef = useRef(null);
@@ -15,13 +16,13 @@ function App() {
 
   const handleToggleNav = () => {
     setNavOpen(!navOpen);
-    setIconRotation(prevRotation => prevRotation + 180); // Rotate by 180 degrees each time
+    setIconRotation(prevRotation => prevRotation + 180);
   };
 
   const handleScroll = (event) => {
     const container = mainContainerRef.current;
     const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
-    container.scrollLeft -= delta * 1000; // Adjust scrolling speed as needed
+    container.scrollLeft -= delta * 1000;
   };
 
   const scrollToSection = (sectionId) => {
@@ -49,6 +50,9 @@ function App() {
       <div className='main-container' ref={mainContainerRef}>
         <div className={`page ${navOpen ? 'darken' : ''}`} id="home">
           <Home />
+        </div>
+        <div className={`page ${navOpen ? 'darken' : ''}`}>
+          <About />
         </div>
         <div className={`page ${navOpen ? 'darken' : ''}`} id="skills">
           <Skills />
