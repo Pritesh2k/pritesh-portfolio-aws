@@ -41,6 +41,7 @@ function App() {
         <div className='nav-title'>Menu</div>
         <ul className='nav-items'>
           <li className='item' onClick={() => scrollToSection('home')}>Home</li>
+          <li className='item' onClick={() => scrollToSection('about')}>About</li>
           <li className='item' onClick={() => scrollToSection('skills')}>Skills</li>
           <li className='item' onClick={() => scrollToSection('projects')}>Projects</li>
           <li className='item' onClick={() => scrollToSection('contact')}>Contact</li>
@@ -51,7 +52,7 @@ function App() {
         <div className={`page ${navOpen ? 'darken' : ''}`} id="home">
           <Home />
         </div>
-        <div className={`page ${navOpen ? 'darken' : ''}`}>
+        <div className={`page ${navOpen ? 'darken' : ''}`} id="about">
           <About />
         </div>
         <div className={`page ${navOpen ? 'darken' : ''}`} id="skills">
