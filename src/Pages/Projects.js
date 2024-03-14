@@ -6,6 +6,7 @@ function Projects() {
     <div className='projects-container'>
       <div className='projects-header'>
         <div className='projects-title'>Projects</div>
+        <div className='projects-line' />
       </div>
       <div className='projects-subheader'>
 

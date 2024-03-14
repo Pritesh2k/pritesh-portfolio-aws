@@ -79,7 +79,6 @@
 
     width: 0%;
     height: 2px;
-    border-radius: 25%;
 
     transform: translateY(15px);
     background-color: red;
@@ -421,12 +420,12 @@
 
     width: 30vw;
     height: 30vw;
-    padding: 0.25em;
+    padding: 1em;
 
     opacity: 0;
 
     font-family: "Lora", serif;
-    font-size: 0.9em;
+    font-size: 0.75em;
     text-transform: capitalize;
     text-align: left;
     line-height: 1.45em;

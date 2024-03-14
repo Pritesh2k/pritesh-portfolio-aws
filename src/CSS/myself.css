@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.myself-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 95%;
+    height: 90%;
+    padding: 1em;
+
+    font-family: "Lora", serif;
+    font-size: 0.85em;
+    text-transform: capitalize;
+    line-height: 1.85em;
+
+    opacity: 0;
+    transform: translateY(30vh);
+
+    background-color: rgb(245, 245, 245);
+    
+
+    animation: myself-entry 0.5s ease-in-out forwards;
+}
+
+@keyframes myself-entry{
+    0%{
+        opacity: 0;
+        transform: translateY(30vh);
+        box-shadow: 0px 0px 100px 20px rgba(0, 0, 0, 0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+        box-shadow: 0px 0px 10px 10px rgba(80, 80, 80, 0.062);
+    }
+}

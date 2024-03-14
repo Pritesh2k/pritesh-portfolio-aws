@@ -1,0 +1,166 @@
+.journey-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add position relative for positioning the blue div */
+
+    width: 95%;
+    height: 90%;
+
+    font-family: "Lora", serif;
+    font-size: 0.85em;
+    text-transform: capitalize;
+    line-height: 1.85em;
+
+    opacity: 0;
+    transform: translateY(30vh);
+
+    background-color: rgb(245, 245, 245);
+
+    animation: myself-entry 0.5s ease-in-out forwards;
+}
+
+.A-Level-item-container,
+.FunTech-item-container,
+.SRPR-item-container,
+.BSC-cp-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 0 calc(33.33%); /* Adjust width for 3x3 grid with margin */
+    height: 50%; /* Set the height as desired */
+
+    position: relative; /* Add position relative for positioning the blue div */
+
+    transition: all 0.3s ease-in-out;
+}
+
+.item-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+}
+
+.item-title{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.item-date{
+    font: 1em;
+    font: 100;
+    color: rgb(65, 65, 65);
+}
+
+.mountable-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    position: absolute;
+    z-index: 12;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 1em;
+
+    background-color: rgb(245, 245, 245);
+
+    transition: opacity 0.3s ease-in-out; /* Transition for opacity change */
+    animation: fade-up 0.5s ease-in-out forwards; /* Initial fade-up animation */
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(10vh); /* Move slightly upwards */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Restore to original position */
+    }
+}
+
+.close-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 3vw;
+    height: 3vw;
+    color: grey;
+}
+
+.mount-title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 20%;
+}
+
+.mount-title div{
+    font-size: 2em;
+    color: red;
+}
+
+.mount-title span{
+    font-size: 1em;
+    color: rgba(255, 0, 0, 0.623);
+}
+
+.mount-key-words{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+
+    font-size: 0.75em;
+    color: rgb(122, 122, 122);
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70%;
+    padding: 1.25em;
+
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1.75em;
+    text-align: justify;
+}
+
+.open-mount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+
+    width: 2vw;
+    height: 2vw;
+
+    color: rgba(255, 0, 0, 0.301);
+}

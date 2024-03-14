@@ -74,7 +74,7 @@
   color: white;
 
   animation: pop-out 2s ease forwards;
-  animation-delay: 9s;
+  animation-delay: 8s;
 }
 
 @keyframes pop-out{

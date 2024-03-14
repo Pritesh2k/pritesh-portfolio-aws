@@ -6,6 +6,7 @@ function Skills() {
     <div className='skills-container'>
       <div className='skills-subheader'>
         <div className='skills-title'>Skills</div>
+        <div className='skills-line' />
       </div>
       <div className='skills-header'>
         
