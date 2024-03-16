@@ -30,9 +30,9 @@ function JourneySection() {
             case 'A-Level':
                 return 'A-Level';
             case 'FunTech':
-                return 'FunTech';
+                return 'Python Tutor';
             case 'SRPR':
-                return 'Swipe Right PR';
+                return 'Junior Account\'s Assistant';
             case 'BSC-cp':
                 return 'BSc Computer Science';
             default:
@@ -107,7 +107,7 @@ function JourneySection() {
             >
                 <div className='item-container'>
                     <div className='item-title'>
-                        FunTech
+                        Python Tutor
                     </div>
                     <div className='item-date'>
                         2020 - 2021
@@ -121,7 +121,7 @@ function JourneySection() {
             >
                 <div className='item-container'>
                     <div className='item-title'>
-                        Swipe Right PR
+                        Junior Account's Assistant
                     </div>
                     <div className='item-date'>
                         2021 - 2023

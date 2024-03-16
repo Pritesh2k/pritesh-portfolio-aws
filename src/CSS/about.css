@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-.about-container{
+.about-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 11;
 
     width: 30%;
     height: 100%;
@@ -23,6 +25,8 @@
 
     color: white;
     background-color: rgb(27, 27, 27);
+    box-shadow: 25px 0px 30px -20px rgba(0, 0, 0, 0.45),
+        0px 0px 30px -20px rgba(0, 0, 0, 0.45);
 }
 
 .about-subheader {
@@ -40,7 +44,7 @@
     background-color: rgb(240, 240, 240);
 }
 
-.about-title{
+.about-title {
     font-family: "Lora", serif;
     font-size: 3em;
     text-transform: uppercase;
@@ -48,7 +52,7 @@
     color: red;
 }
 
-.about-content-container{
+.about-content-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +62,7 @@
     height: 100%;
 }
 
-.about-content-nav{
+.about-content-nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -68,7 +72,7 @@
     gap: 2em;
 }
 
-.myself-title-toggle{
+.myself-title-toggle {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -81,7 +85,7 @@
     text-transform: uppercase;
 }
 
-.journey-title-toggle{
+.journey-title-toggle {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -94,7 +98,7 @@
     text-transform: uppercase;
 }
 
-.about-content{
+.about-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,22 +109,22 @@
 
 .myself-title-toggle:hover,
 .journey-title-toggle:hover {
-  letter-spacing: 0.1em;
-  color: rgb(233, 0, 0);
+    letter-spacing: 0.1em;
+    color: rgb(233, 0, 0);
 
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .myself-title-toggle.active,
 .journey-title-toggle.active {
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: rgb(255, 0, 0);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: rgb(255, 0, 0);
 
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-line{
+.nav-line {
     position: absolute;
     top: 0;
 
@@ -133,7 +137,7 @@
     background-color: black;
 }
 
-.vertical-line{
+.vertical-line {
     position: absolute;
     top: 0;
 
@@ -146,7 +150,7 @@
     background-color: black;
 }
 
-.about-tags{
+.about-tags {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +160,7 @@
     padding: 1em;
 }
 
-.about-tags ul{
+.about-tags ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,16 +171,72 @@
     font-size: 1em;
     text-transform: capitalize;
     color: rgb(70, 70, 70);
-    
+
     gap: 5em;
     padding: 0;
     margin: 0;
 }
 
-.about-line{
+.about-line {
     width: 15vw;
     height: 2px;
 
     background-color: red;
     box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    width: 0vw;
+    height: 30vw;
+
+    background-color: rgba(0, 0, 0, 0.705);
+    transition: width 0.5s ease-in-out;
+}
+
+.about-text.visible {
+    width: 30vw;
+}
+
+.about-text-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30vw;
+    height: 30vw;
+    padding: 1em;
+
+    opacity: 0;
+
+    font-family: "Lora", serif;
+    font-size: 0.75em;
+    text-transform: capitalize;
+    text-align: left;
+    line-height: 1.45em;
+
+    transform: scale(0);
+
+    transition: opacity 0.5s ease;
+}
+
+.about-text-content.visible {
+    opacity: 1;
+    
+    animation: text-enter 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes text-enter {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

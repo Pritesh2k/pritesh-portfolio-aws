@@ -9,7 +9,7 @@ function Projects() {
         <div className='projects-line' />
       </div>
       <div className='projects-subheader'>
-
+        
       </div>
     </div>
   )
