@@ -3,6 +3,7 @@ import '../../CSS/journey.css';
 
 import CloseIcon from '@mui/icons-material/Close';
 import AllOutIcon from '@mui/icons-material/AllOut';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 function JourneySection() {
     const [activeItem, setActiveItem] = useState(null);
@@ -98,7 +99,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2019
                     </div>
-                    {/* <div className='open-mount'><AllOutIcon fontSize='small' /></div> */}
+                    <div className='open-mount'><RemoveIcon fontSize='small' /></div>
                 </div>
             </div>
             <div
