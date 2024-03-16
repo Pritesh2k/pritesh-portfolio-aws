@@ -32,7 +32,7 @@ function JourneySection() {
             case 'FunTech':
                 return 'Python Tutor';
             case 'SRPR':
-                return 'Junior Account\'s Assistant';
+                return 'Junior Account Assistant';
             case 'BSC-cp':
                 return 'BSc Computer Science';
             default:
@@ -89,7 +89,7 @@ function JourneySection() {
         <div className='journey-container'>
             <div
                 className={`A-Level-item-container ${activeItem === 'A-Level' ? 'active' : ''}`}
-                onClick={() => handleClick('A-Level')}
+                // onClick={() => handleClick('A-Level')}
             >
                 <div className='item-container'>
                     <div className='item-title'>
@@ -98,7 +98,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2019
                     </div>
-                    <div className='open-mount'><AllOutIcon fontSize='small' /></div>
+                    {/* <div className='open-mount'><AllOutIcon fontSize='small' /></div> */}
                 </div>
             </div>
             <div
@@ -121,7 +121,7 @@ function JourneySection() {
             >
                 <div className='item-container'>
                     <div className='item-title'>
-                        Junior Account's Assistant
+                        Junior Account Assistant
                     </div>
                     <div className='item-date'>
                         2021 - 2023
@@ -146,11 +146,11 @@ function JourneySection() {
             {showMountableDiv && (
                 <div className={`mountable-div ${!showMountableDiv ? 'unmount' : ''}`}>
                     <div className='mount-title'>
-                        <div>{title}</div>
+                        <a>{title}</a>
                         <span>{date}</span>
+                        <div className='mount-key-words'>{keywords}</div>
+                        <div className='mount-content'>{description}</div>
                     </div>
-                    <div className='mount-key-words'>{keywords}</div>
-                    <div className='description'>{description}</div>
                     <a className='close-button' onClick={handleUnmount}><CloseIcon fontSize='small' /></a>
                 </div>
             )}

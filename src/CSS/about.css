@@ -46,7 +46,7 @@
 
 .about-title {
     font-family: "Lora", serif;
-    font-size: 3em;
+    font-size: 2em;
     text-transform: uppercase;
 
     color: red;
@@ -58,18 +58,19 @@
     align-items: center;
     flex-direction: column;
 
-    width: 100%;
+    width: 70%;
     height: 100%;
 }
 
 .about-content-nav {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: end;
 
     width: 100%;
-    height: 20%;
+    height: 15%;
     gap: 2em;
+    padding-bottom: 0.75em;
 }
 
 .myself-title-toggle {
@@ -81,7 +82,7 @@
     height: 30%;
 
     font-family: "Lora", serif;
-    font-size: 1.75em;
+    font-size: 1.25em;
     text-transform: uppercase;
 }
 
@@ -94,7 +95,7 @@
     height: 30%;
 
     font-family: "Lora", serif;
-    font-size: 1.75em;
+    font-size: 1.25em;
     text-transform: uppercase;
 }
 
@@ -104,7 +105,7 @@
     align-items: center;
 
     width: 100%;
-    height: 70%;
+    height: 60%;
 }
 
 .myself-title-toggle:hover,
@@ -128,9 +129,9 @@
     position: absolute;
     top: 0;
 
-    transform: translateY(15vh);
+    transform: translateY(22.5vh);
 
-    width: 60%;
+    width: 65%;
     height: 1px;
     border-radius: 75%;
 
@@ -141,7 +142,7 @@
     position: absolute;
     top: 0;
 
-    transform: translateY(6vh);
+    transform: translateY(15vh);
 
     width: 1px;
     height: 7%;
@@ -153,7 +154,7 @@
 .about-tags {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 
     width: 100%;
     height: 10%;
@@ -168,11 +169,11 @@
     list-style: none;
 
     font-family: "Lora", serif;
-    font-size: 1em;
+    font-size: 0.8em;
     text-transform: capitalize;
     color: rgb(70, 70, 70);
 
-    gap: 5em;
+    gap: 1.75em;
     padding: 0;
     margin: 0;
 }
@@ -182,7 +183,7 @@
     height: 2px;
 
     background-color: red;
-    box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);
+    box-shadow: 0px 0px 20px 0px rgb(253, 0, 0);
 }
 
 .about-text {

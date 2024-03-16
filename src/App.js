@@ -1,7 +1,7 @@
 // App.js
 import React, { useRef, useState } from 'react';
 import './App.css';
-import Home from './Pages/Home copy';
+import Home from './Pages/Home';
 import Skills from './Pages/Skills';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
