@@ -15,8 +15,8 @@ function Home() {
           <div className='picture-container'>
             <img className='cover-picture' src={profilePic} alt='profile picture' />
             <div className='link-container'>
-              <div className='link'><GitHubIcon /></div>
-              <div className='link'><LinkedInIcon /></div>
+              <div className='link'><GitHubIcon fontSize='large'/></div>
+              <div className='link'><LinkedInIcon fontSize='large'/></div>
             </div>
           </div>
           <div className='name-title'>Portfolio</div>
