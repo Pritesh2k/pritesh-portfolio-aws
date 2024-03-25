@@ -36,7 +36,7 @@ function App() {
     <div className={`primary-container-wrapper ${navOpen ? 'nav-open' : ''}`} onWheel={handleScroll}>
       <div className={`nav-container ${navOpen ? 'open' : ''}`}>
         <a className='nav-state-toggle' onClick={handleToggleNav}>
-          <KeyboardArrowRightIcon style={{ transform: `rotate(${iconRotation}deg)`, color:'red'}} />
+          <KeyboardArrowRightIcon fontSize='small' style={{ transform: `rotate(${iconRotation}deg)`, color:'red'}} />
         </a>
         <div className='nav-title'>Menu</div>
         <ul className='nav-items'>

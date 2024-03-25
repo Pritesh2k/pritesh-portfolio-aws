@@ -46,7 +46,7 @@
 
 .about-title {
     font-family: "Lora", serif;
-    font-size: 2em;
+    font-size: 2.5vw;
     text-transform: uppercase;
 
     color: red;
@@ -82,7 +82,7 @@
     height: 30%;
 
     font-family: "Lora", serif;
-    font-size: 1.25em;
+    font-size: 1.5vw;
     text-transform: uppercase;
 }
 
@@ -95,7 +95,7 @@
     height: 30%;
 
     font-family: "Lora", serif;
-    font-size: 1.25em;
+    font-size: 1.5vw;
     text-transform: uppercase;
 }
 
@@ -169,7 +169,7 @@
     list-style: none;
 
     font-family: "Lora", serif;
-    font-size: 0.8em;
+    font-size: 1vw;
     text-transform: capitalize;
     color: rgb(70, 70, 70);
 
@@ -179,7 +179,7 @@
 }
 
 .about-line {
-    width: 15vw;
+    width: 12vw;
     height: 2px;
 
     background-color: red;

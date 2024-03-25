@@ -34,14 +34,14 @@ function Skills() {
             </div>
             <div className='top-right'>
               Academic
-              <div className='skills-line'></div>
+              <div className='skill-container-line'></div>
               <div className='click-me'>Click Me</div>
             </div>
           </div>
           <div className='bottom-container'>
             <div className='bottom-left'>
               Work Place
-              <div className='skills-line'></div>
+              <div className='skill-container-line'></div>
               <div className='click-me'>Click Me</div>
             </div>
             <div className='bottom-right'>

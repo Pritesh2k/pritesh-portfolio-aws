@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../CSS/journey.css';
 
 import CloseIcon from '@mui/icons-material/Close';
-import AllOutIcon from '@mui/icons-material/AllOut';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 function JourneySection() {
@@ -113,7 +113,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2020 - 2021
                     </div>
-                    <div className='open-mount'><AllOutIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
                 </div>
             </div>
             <div
@@ -127,7 +127,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2021 - 2023
                     </div>
-                    <div className='open-mount'><AllOutIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
                 </div>
             </div>
             <div
@@ -141,7 +141,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2020 - 2023
                     </div>
-                    <div className='open-mount'><AllOutIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
                 </div>
             </div>
             {showMountableDiv && (

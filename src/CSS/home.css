@@ -107,10 +107,11 @@
     width: 60%;
     height: 10%;
     opacity: 0;
+    margin-top: 5rem;
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 2vw;
+    font-size: 1.5vw;
 
     animation: fade-down 1s ease-in-out forwards;
     animation-delay: 1s;
@@ -127,7 +128,7 @@
 
     font-family: "Lora", serif;
     text-transform: uppercase;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 600;
 
     color: red;
@@ -146,7 +147,7 @@
 
     font-family: "Lora", serif;
     text-transform: uppercase;
-    font-size: 2.5vw;
+    font-size: 2.25vw;
     font-weight: 600;
     opacity: 0;
 
@@ -182,7 +183,6 @@
     width: 60%;
     height: 30%;
     opacity: 0;
-    margin-top: 3vh;
 
     font-family: "Lora", serif;
     text-transform: capitalize;
@@ -192,7 +192,7 @@
     color: rgba(255, 255, 255, 0.5);
 
     animation: fade-down 1s ease-in-out forwards;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
 }
 
 @keyframes fade-down {
@@ -203,17 +203,19 @@
 
     100% {
         opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(0.5vh);
     }
 }
 
 @keyframes home-line-expand{
     0%{
         width: 0;
+        transform: translateY(-4vh);
     }
 
     100%{
         width: 60%;
+        transform: translateY(-2vh);
     }
 }
 
@@ -226,7 +228,7 @@
     height: 10%;
 
     font-family: "Lora", serif;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 600;
     text-transform: uppercase;
 

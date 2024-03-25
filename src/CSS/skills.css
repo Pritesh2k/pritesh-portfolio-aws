@@ -34,13 +34,14 @@
 
 .skills-title {
     font-family: "Lora", serif;
-    font-size: 3em;
+    font-size: 2.5vw;
     text-transform: uppercase;
 }
 
 .skills-line {
-    width: 15vw;
+    width: 12vw;
     height: 2px;
+    margin-top: 1vh;
     background-color: red;
     box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);
 }
@@ -65,13 +66,14 @@
 }
 
 .skill-container-line {
-    width: 60%;
+    width: 12vw;
     height: 2px;
+    margin-top: 1vh;
     background-color: red;
 }
 
 .alt {
-    width: 15vw;
+    width: 12vw;
     height: 2px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
@@ -88,7 +90,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 1.75em;
+    font-size: 1.5vw;
 
     color: red;
     filter: brightness(1);
@@ -102,7 +104,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 0.5em;
+    font-size: 1vw;
     font-style: italic;
 
     width: 100%;
@@ -131,7 +133,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 1.75em;
+    font-size: 1.5vw;
 }
 
 .top-right:hover .click-me{
@@ -152,7 +154,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 1.75em;
+    font-size: 1.5vw;
 }
 
 .bottom-left:hover .click-me{
@@ -173,7 +175,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 1.75em;
+    font-size: 1.5vw;
 
     color: red;
     filter: brightness(1);

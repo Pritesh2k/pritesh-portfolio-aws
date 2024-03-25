@@ -48,14 +48,14 @@
 
 .projects-title{
     font-family: "Lora", serif;
-    font-size: 3em;
+    font-size: 2.5vw;
     text-transform: uppercase;
 
     color: red;
 }
 
 .projects-line{
-    width: 22vw;
+    width: 15vw;
     height: 2px;
 
     background-color: red;
