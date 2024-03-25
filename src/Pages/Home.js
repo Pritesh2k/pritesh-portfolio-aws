@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../CSS/home.css'
 
 import profilePic from '../Assets/Profile-pic.jpg'
@@ -13,7 +13,7 @@ function Home() {
       <div className='home-container'>
         <div className='home-subheader'>
           <div className='picture-container'>
-            <img className='cover-picture' src={profilePic} alt='profile picture' />
+            <img className='cover-picture' src={profilePic} alt='profile' />
             <div className='link-container'>
               <div className='link'><GitHubIcon fontSize='large'/></div>
               <div className='link'><LinkedInIcon fontSize='large'/></div>

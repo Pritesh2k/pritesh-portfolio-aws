@@ -51,8 +51,6 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     gap: 0.5em;
-
-    background-color: aqua;
 }
 
 .link {
@@ -112,6 +110,7 @@
 
     font-family: "Lora", serif;
     text-transform: capitalize;
+    font-size: 2vw;
 
     animation: fade-down 1s ease-in-out forwards;
     animation-delay: 1s;
@@ -128,7 +127,7 @@
 
     font-family: "Lora", serif;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 3vw;
     font-weight: 600;
 
     color: red;
@@ -147,7 +146,7 @@
 
     font-family: "Lora", serif;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 2.5vw;
     font-weight: 600;
     opacity: 0;
 
@@ -169,7 +168,7 @@
     box-shadow: 0px -5px 20px 0px rgb(255, 0, 0),
         /* White shadow on top */
         0px 5px 20px 0px rgb(255, 255, 255);
-    /* Red shadow on bottom */
+        /* Red shadow on bottom */
 
     animation: home-line-expand 1s ease-in-out forwards;
     animation-delay: 2.5s;
@@ -178,15 +177,16 @@
 .home-short-about {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
 
     width: 60%;
     height: 30%;
     opacity: 0;
+    margin-top: 3vh;
 
     font-family: "Lora", serif;
     text-transform: capitalize;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 600;
 
     color: rgba(255, 255, 255, 0.5);
@@ -226,7 +226,7 @@
     height: 10%;
 
     font-family: "Lora", serif;
-    font-size: 2em;
+    font-size: 3vw;
     font-weight: 600;
     text-transform: uppercase;
 
