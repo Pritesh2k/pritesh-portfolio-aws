@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import '../CSS/about.css';
+
 import MyselfSection from './Components/MyselfSection'; // Import MyselfSection component
 import JourneySection from './Components/JourneySection'; // Import JourneySection component
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 
 function About() {
     const [activeSection, setActiveSection] = useState('myself'); // Track active section
@@ -22,7 +24,7 @@ function About() {
                         <a className={`myself-title-toggle ${activeSection === 'myself' ? 'active' : ''}`} onClick={() => handleToggle('myself')}>
                             Myself
                         </a>
-                        <div className='vertical-line' />
+                        <div className='vertical-line-icon'> <SwapHorizIcon /> </div>
                         <a className={`journey-title-toggle ${activeSection === 'journey' ? 'active' : ''}`} onClick={() => handleToggle('journey')}>
                             Journey
                         </a>
