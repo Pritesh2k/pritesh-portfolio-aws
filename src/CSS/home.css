@@ -189,7 +189,7 @@
     font-size: 1vw;
     font-weight: 600;
 
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
 
     animation: fade-down 1s ease-in-out forwards;
     animation-delay: 2.5s;
