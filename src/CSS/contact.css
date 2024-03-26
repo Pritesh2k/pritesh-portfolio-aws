@@ -44,13 +44,13 @@
 
 .contact-title{
     font-family: "Lora", serif;
-    font-size: 3em;
+    font-size: 2.5vw;
     text-transform: uppercase;
 }
 
 .contact-line{
-    width: 21vw;
-    height: 2px;
+    width: 14vw;
+    height: 1.75px;
 
     background-color: red;
     box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);

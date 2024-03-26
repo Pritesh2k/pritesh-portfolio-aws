@@ -156,7 +156,7 @@
     top: 0;
     z-index: 12;
 
-    transform: translateY(15.5vh);
+    transform: translateY(15vh);
 
     color: rgb(155, 0, 0);
 }
