@@ -31,9 +31,9 @@ function Projects() {
                 <div className='project-title'>
                   Timley Crime Information System
                 </div>
-                <div className='project-link'>
+                <a href='https://github.com/Pritesh2k/FinalYearProject' className='project-link'>
                   <GitHubIcon fontSize='large' />
-                </div>
+                </a>
 
                 <div className='project-context'>
                   <div className='methods-header'>Methods & Technuiqes</div>
@@ -70,9 +70,9 @@ function Projects() {
                 <div className='project-title'>
                   web-portfolio
                 </div>
-                <div className='project-link'>
+                <a href='https://github.com/Pritesh2k/pritesh-portfolio-aws' className='project-link'>
                   <GitHubIcon fontSize='large' />
-                </div>
+                </a>
 
                 <div className='project-context'>
                   <div className='methods-header'>Methods & Technuiqes</div>
@@ -103,9 +103,9 @@ function Projects() {
                 <div className='project-title'>
                   Python Client Server
                 </div>
-                <div className='project-link'>
+                <a href='https://github.com/Pritesh2k/SimplePythonServer' className='project-link'>
                   <GitHubIcon fontSize='large' />
-                </div>
+                </a>
 
                 <div className='project-context'>
                   <div className='methods-header'>Methods & Technuiqes</div>

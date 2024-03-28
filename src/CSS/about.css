@@ -154,11 +154,11 @@
 .vertical-line-icon{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 
     width: 2.5vw;
     height: 2.5vw;
-    
+
     color: rgb(155, 0, 0);
 }
 

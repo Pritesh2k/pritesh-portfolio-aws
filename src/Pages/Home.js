@@ -15,8 +15,8 @@ function Home() {
           <div className='picture-container'>
             <img className='cover-picture' src={profilePic} alt='profile' />
             <div className='link-container'>
-              <div className='link'><GitHubIcon fontSize='large'/></div>
-              <div className='link'><LinkedInIcon fontSize='large'/></div>
+              <a href='https://github.com/Pritesh2k' className='link'><GitHubIcon fontSize='large'/></a>
+              <a href='https://www.linkedin.com/in/pritesh-parekh2000/' className='link'><LinkedInIcon fontSize='large'/></a>
             </div>
           </div>
           <div className='name-title'>Portfolio</div>

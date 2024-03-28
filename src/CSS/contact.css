@@ -15,7 +15,7 @@
     align-items: center;
     flex-direction: column;
 
-    width: 70%;
+    width: 30%;
     height: 100%;
     gap: 0.5em;
 
@@ -33,7 +33,7 @@
     align-items: center;
     flex-direction: column;
 
-    width: 30%;
+    width: 70%;
     height: 100%;
 
     transform: translateY(100vw);
@@ -46,6 +46,29 @@
     font-family: "Lora", serif;
     font-size: 2.5vw;
     text-transform: uppercase;
+}
+
+.contact-email{
+    font-family: "Lora", serif;
+    font-size: 1.25vw;
+    text-transform: uppercase;
+
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+
+    color: white;
+}
+
+.contact-email:hover{
+    letter-spacing: 0.5rem;
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+.top{
+    position: absolute;
+    top: 2rem;
 }
 
 .contact-line{
