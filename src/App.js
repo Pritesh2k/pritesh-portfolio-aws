@@ -21,8 +21,17 @@ function App() {
 
   const handleScroll = (event) => {
     const container = mainContainerRef.current;
-    const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
-    container.scrollLeft -= delta * 1000;
+    const scrollBox = document.getElementById('scroll-box');
+    const isMouseOverScrollBox = scrollBox && scrollBox.contains(event.target);
+  
+    if (isMouseOverScrollBox) {
+      // Enable vertical scrolling
+      container.scrollTop += event.deltaY;
+    } else {
+      // Enable horizontal scrolling
+      const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
+      container.scrollLeft -= delta * 1000;
+    }
   };
 
   const scrollToSection = (sectionId) => {
