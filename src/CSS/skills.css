@@ -163,6 +163,16 @@
     color: rgb(32, 32, 32);
 }
 
+.sub-title{
+    font-family: "Lora", serif;
+    font-size: 0.8vw;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(160, 0, 0);
+    margin-top: -5vh;
+}
+
 .academic-container{
     display: flex;
     justify-content: center;
@@ -214,11 +224,12 @@
     align-items: center;
 
     width: 100%;
+    margin-top: -1vh;
     font-family: "Lora", serif;
     font-size: 0.8vw;
     text-align: center;
     text-transform: capitalize;
-    color: rgb(70, 70, 70);
+    color: rgb(160, 0, 0);
 }
 
 .certificates-skills ul{

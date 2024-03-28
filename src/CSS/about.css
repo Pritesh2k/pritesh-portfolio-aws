@@ -152,12 +152,13 @@
 }
 
 .vertical-line-icon{
-    position: absolute;
-    top: 0;
-    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 
-    transform: translateY(15vh);
-
+    width: 2.5vw;
+    height: 2.5vw;
+    
     color: rgb(155, 0, 0);
 }
 

@@ -13,7 +13,7 @@ import PowershellOriginal from 'devicons-react/lib/icons/PowershellOriginal';
 
 const skillsList = {
   technical: [<AmazonwebservicesOriginalWordmark size={30}/>, <PythonOriginal size={30}/>, <JavaOriginal size={30}/>, <JavascriptPlain size={30}/>, <ReactOriginalWordmark size={30}/>, <PowershellOriginal size={30}/>, <AndroidstudioOriginal size={30}/>],
-  techincalDesc: ["AWS, CI/CD", "Python, Data Analysis, Scripting", "Java", "Java Script", "React JS", "Command Line", "Android Studios"],
+  techincalDesc: ["AWS | CI/CD", "Python | Data Analysis, Scripting", "Java | OOP", "Java Script", "React JS | Full-Stack, Design", "Command Line", "Android Studios | Java"],
   academic: ["Software Development/Management", "Artificial Intelligence", "Cybersecurity", "Networking", "Information Systems", "Autonomy"],
   workPlace: ["Project Architecture", "Software Implementation", "Project Management Tools", "Analyst", "Task Management", "Communication Skills", "Analytical Skills", "MS Office"],
   certificates: ["Skill 10", "Skill 11", "Skill 12"]
@@ -65,7 +65,8 @@ function Skills() {
             {/* Academic */}
             {mountContainerText === "Academic" && (
               <div className="academic-skills">
-                <div className="technical-skill-item-titles main-title">BSc Computer Science Modules</div>
+                <div className="technical-skill-item-titles main-title">BSc Computer Science</div>
+                <div className="technical-skill-item-titles sub-title">Brunel University London</div>
                 {skillsList.academic.map((skill, index) => (
                   <div key={index} className="technical-skill-item-titles">
                     {skill}
@@ -98,12 +99,18 @@ function Skills() {
                 <div className='certificate-header'>Google Cloud Run Course - 2023</div>
                 <div className='certificate-subheader'>Google</div>
 
+                <div/>
+
                 <div className='certificate-header'>AWS Cloud Practitioner Essential Course - 2023</div>
                 <div className='certificate-subheader'>Amazon</div>
 
+                <div/>
+
                 <div className='certificate-header'>Cybersecurity Virtual Experience Program - 2022</div>
                 <div className='certificate-subheader'>MasterCard</div>
-
+                
+                <div/>
+                
                 <div className='certificate-header'>Virtual Engineering Program - 2021</div>
                 <div className='certificate-subheader'>Goldman Sachs</div>
               </div>
