@@ -131,6 +131,15 @@
     text-transform: uppercase;
 }
 
+.project-link{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    width: 100%;
+    height: 10%;
+}
+
 .project-context{
     display: flex;
     justify-content: center;
@@ -138,7 +147,7 @@
     flex-direction: column;
     
     width: 100%;
-    height: 65%;
+    height: 70%;
 
     font-family: "Lora", serif;
     font-size: 1vw;
@@ -158,6 +167,8 @@
     padding: none;
     margin: none;
     text-align: left;
+
+    width: 53vw;
 }
 
   
