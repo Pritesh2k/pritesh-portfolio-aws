@@ -14,7 +14,7 @@ import PowershellOriginal from 'devicons-react/lib/icons/PowershellOriginal';
 const skillsList = {
   technical: [<AmazonwebservicesOriginalWordmark size={30}/>, <PythonOriginal size={30}/>, <JavaOriginal size={30}/>, <JavascriptPlain size={30}/>, <ReactOriginalWordmark size={30}/>, <PowershellOriginal size={30}/>, <AndroidstudioOriginal size={30}/>],
   techincalDesc: ["AWS | CI/CD", "Python | Data Analysis, Scripting", "Java | OOP", "Java Script", "React JS | Full-Stack, Design", "Command Line", "Android Studios | Java"],
-  academic: ["Software Development/Management", "Artificial Intelligence", "Cybersecurity", "Networking", "Information Systems", "Autonomy"],
+  academic: ["Software Development & Management", "System Architecture", "Artificial Intelligence", "Cybersecurity", "Networking", "Usability Engineering", "Autonomy", "Mixed/Augmented Reality"],
   workPlace: ["Project Architecture", "Software Implementation", "Project Management Tools", "Analyst", "Task Management", "Communication Skills", "Analytical Skills", "MS Office"],
   certificates: ["Skill 10", "Skill 11", "Skill 12"]
 };
