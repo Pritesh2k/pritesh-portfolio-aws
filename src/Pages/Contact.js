@@ -10,7 +10,7 @@ function Contact() {
       </div>
       <div className='contact-header'>
         <div className='contact-title top'>Get In Touch</div>
-        <a className='contact-email' href="mailto:recipient@example.com">Email</a>
+        <a className='contact-email' href="mailto:parekhp695@gmail.com">Email</a>
         <a className='contact-email' href="https://github.com/Pritesh2k">Github</a>
         <a className='contact-email' href="https://www.linkedin.com/in/pritesh-parekh2000/">LinkedIn</a>
       </div>
