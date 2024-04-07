@@ -74,9 +74,6 @@ function App() {
         <div className={`page ${navOpen ? 'darken' : ''}`} id="contact">
           <Contact />
         </div>
-        <div className={`page ${navOpen ? 'darken' : ''}`} id="weather">
-          <WeatherApp />
-        </div>
       </div>
     </div>
   );

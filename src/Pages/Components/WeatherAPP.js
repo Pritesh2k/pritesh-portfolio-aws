@@ -50,7 +50,9 @@ function WeatherApp() {
         <div className="weather-app">
             <h1>Weather App</h1>
             <div className='cloud-info'>
-                <p><strong>{weatherData.weather[0].description}</strong></p>
+                {weatherData && weatherData.weather && weatherData.weather[0] && (
+                    <p><strong>{weatherData.weather[0].description}</strong></p>
+                )}
             </div>
             <div>
                 {error && <p className="error">{error}</p>}
