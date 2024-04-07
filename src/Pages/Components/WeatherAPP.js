@@ -58,23 +58,9 @@ function WeatherApp() {
                 {error && <p className="error">{error}</p>}
                 {!error && !weatherData && <p>Loading...</p>}
                 {weatherData && (
+                    <>
                     <div className="weather-data-card">
-                        <div className='location'>
-                            <div className='loc-title-country'>
-                                <h2>{weatherData.name}</h2>
-                                <h3>{weatherData.sys.country}</h3>
-                            </div>
-                            <div className='search-box-weather-location'>
-                                <input
-                                    type="text"
-                                    placeholder="Enter city name"
-                                    value={city}
-                                    onChange={(e) => setCity(e.target.value)}
-                                />
-                                <button onClick={fetchWeatherData}>Get Weather</button>
-                            </div>
 
-                        </div>
                         <div className='information'>
 
                             <div className='temp-info'>
@@ -133,6 +119,24 @@ function WeatherApp() {
 
                         </div>
                     </div>
+                    
+                    <div className='location'>
+                            <div className='loc-title-country'>
+                                <h2>{weatherData.name}</h2>
+                                <h3>{weatherData.sys.country}</h3>
+                            </div>
+                            <div className='search-box-weather-location'>
+                                <input
+                                    type="text"
+                                    placeholder="Enter city name"
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
+                                />
+                                <button className='input-button' onClick={fetchWeatherData}>Get Weather</button>
+                            </div>
+
+                        </div>
+                   </> 
                 )}
             </div>
         </div>
