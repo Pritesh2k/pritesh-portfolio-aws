@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../CSS/projects.css';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
+import WeatherApp from './Components/WeatherAPP';
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState('FYP');
@@ -21,6 +22,7 @@ function Projects() {
           <a onClick={() => handleProjectClick('FYP')}>Timely Crime Information System</a>
           <a onClick={() => handleProjectClick('web-portfolio')}>Web Portfolio</a>
           <a onClick={() => handleProjectClick('python-scripting')}>Python Client Server</a>
+          <a onClick={() => handleProjectClick('Weather-API')}>Weather API</a>
         </div>
 
         {/* Render project content based on selectedProject */}
@@ -123,6 +125,14 @@ function Projects() {
                   </ul>
                 </div>
 
+              </div>
+            </div>
+          )}
+
+          {selectedProject === 'Weather-API' && (
+            <div id='Weather-API'>
+              <div className='project-description-weather'>
+                <WeatherApp />
               </div>
             </div>
           )}

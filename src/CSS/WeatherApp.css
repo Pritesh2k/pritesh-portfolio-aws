@@ -1,0 +1,259 @@
+.weather-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.weather-app h1{
+    font-family: "Lora", serif;
+    font-size: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.weather-app text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30vw;
+    height: 10vh;
+    margin-bottom: 2rem;
+
+    font-family: "Lora", serif;
+    font-size: 2vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+  
+  input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .weather-data-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55vw;
+    height: 50vh;
+    padding: 20px;
+  }
+
+  .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 30%;
+    height: 100%;
+
+    font-family: "Lora", serif;
+    font-size: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .loc-title-country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 30%;
+  }
+
+  .loc-title-country :first-child{
+    font-weight: 200;
+  }
+
+  
+  .loc-title-country :last-child{
+    font-weight: 200;
+    margin: 0;
+    color: #4d4d4d;
+  }
+
+  .search-box-weather-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 30%;
+    gap: 2rem;
+  }
+
+  .search-box-weather-location input{
+    text-align: center;
+
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid red;
+
+    background-color: transparent;
+  }
+
+  .location h2{
+    margin: 0;
+  }
+
+  .information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 70%;
+    height: 100%;
+
+    font-family: "Lora", serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .cloud-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 15%;
+  }
+  
+  .temp-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 20%;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .temp-info p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 5.5vw;
+    height: 100%;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .info-data p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5.5vw;
+    height: 70%;
+    margin-top: -2rem;
+
+    font-family: "Lora", serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .sun-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .sun-rise-set-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50%;
+    height: 100%;
+  }
+
+  .sun-set-rise-title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1vw;
+    font-weight: 600;
+  }
+
+  .sun-set-rise-data{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .sunrise-set-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 5.5vw;
+    height: 4vw;
+  }
+
+  .sun-rise {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    color: #4d4d4d;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.4);
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .sun-set {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #483D8B, #6A5ACD);
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(106, 90, 205, 0.4);
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .important{
+    color: rgb(170, 0, 0);
+    border-bottom: 1px solid red;
+  }
+  
