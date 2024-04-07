@@ -141,7 +141,13 @@
     align-items: center;
 
     width: 100%;
-    height: 15%;
+    height: 10%;
+
+    font-family: "Lora", serif;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #4d4d4d;
   }
   
   .temp-info{
