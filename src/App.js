@@ -8,7 +8,6 @@ import Contact from './Pages/Contact';
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import About from './Pages/About';
-import WeatherApp from './Pages/Components/WeatherAPP';
 
 function App() {
   const mainContainerRef = useRef(null);
