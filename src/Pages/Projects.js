@@ -22,7 +22,7 @@ function Projects() {
           <a onClick={() => handleProjectClick('FYP')}>Timely Crime Information System</a>
           <a onClick={() => handleProjectClick('web-portfolio')}>Web Portfolio</a>
           <a onClick={() => handleProjectClick('python-scripting')}>Python Client Server</a>
-          <a onClick={() => handleProjectClick('Weather-API')}>Weather API</a>
+          <a onClick={() => handleProjectClick('Weather-API')}>Weather APP</a>
         </div>
 
         {/* Render project content based on selectedProject */}
