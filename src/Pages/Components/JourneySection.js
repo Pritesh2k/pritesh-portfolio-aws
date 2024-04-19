@@ -99,7 +99,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2019
                     </div>
-                    <div className='open-mount'><RemoveIcon fontSize='small' /></div>
+                    <div className='open-mount'><RemoveIcon fontSize='large' /></div>
                 </div>
             </div>
             <div
@@ -113,7 +113,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2020 - 2021
                     </div>
-                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='large' /></div>
                 </div>
             </div>
             <div
@@ -127,7 +127,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2021 - 2023
                     </div>
-                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='large' /></div>
                 </div>
             </div>
             <div
@@ -141,7 +141,7 @@ function JourneySection() {
                     <div className='item-date'>
                         2020 - 2023
                     </div>
-                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='small' /></div>
+                    <div className='open-mount'><KeyboardArrowUpIcon fontSize='large' /></div>
                 </div>
             </div>
             {showMountableDiv && (
@@ -152,7 +152,7 @@ function JourneySection() {
                         <div className='mount-key-words'>{keywords}</div>
                         <div className='mount-content'>{description}</div>
                     </div>
-                    <a className='close-button' onClick={handleUnmount}><CloseIcon fontSize='small' /></a>
+                    <a className='close-button' onClick={handleUnmount}><CloseIcon fontSize='large' /></a>
                 </div>
             )}
         </div>

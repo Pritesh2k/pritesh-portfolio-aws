@@ -1,18 +1,19 @@
-// App.js
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import Home from './Pages/Home';
 import Skills from './Pages/Skills';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
-
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import About from './Pages/About';
+import SentimentAnalysis from './Pages/Components/SentimentAnalysis';
+import NewsAPI from './Pages/Components/NewsAPI';
 
 function App() {
   const mainContainerRef = useRef(null);
   const [navOpen, setNavOpen] = useState(false);
   const [iconRotation, setIconRotation] = useState(0);
+  const [isPhoneScreen, setIsPhoneScreen] = useState(false);
 
   const handleToggleNav = () => {
     setNavOpen(!navOpen);
@@ -25,12 +26,16 @@ function App() {
     const isMouseOverScrollBox = scrollBox && scrollBox.contains(event.target);
   
     if (isMouseOverScrollBox) {
-      // Enable vertical scrolling
-      container.scrollTop += event.deltaY;
+      // Enable vertical scrolling if screen height is taller than width
+      if (window.innerHeight > window.innerWidth) {
+        container.scrollTop += event.deltaY;
+      }
     } else {
-      // Enable horizontal scrolling
-      const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
-      container.scrollLeft -= delta * 1000;
+      // Enable horizontal scrolling if width is greater than height
+      if (window.innerWidth > window.innerHeight) {
+        const delta = Math.max(-1, Math.min(1, (event.nativeEvent.wheelDelta || -event.nativeEvent.detail)));
+        container.scrollLeft -= delta * 1000;
+      }
     }
   };
 
@@ -40,6 +45,20 @@ function App() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPhoneScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={`primary-container-wrapper ${navOpen ? 'nav-open' : ''}`} onWheel={handleScroll}>
@@ -72,6 +91,9 @@ function App() {
         </div>
         <div className={`page ${navOpen ? 'darken' : ''}`} id="contact">
           <Contact />
+        </div>
+        <div className={`page ${navOpen ? 'darken' : ''}`} id="contact">
+          <NewsAPI />
         </div>
       </div>
     </div>
