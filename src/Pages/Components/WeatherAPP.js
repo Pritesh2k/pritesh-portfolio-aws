@@ -59,84 +59,84 @@ function WeatherApp() {
                 {!error && !weatherData && <p>Loading...</p>}
                 {weatherData && (
                     <>
-                    <div className="weather-data-card">
+                        <div className="weather-data-card">
 
-                        <div className='information'>
+                            <div className='information'>
 
-                            <div className='temp-info'>
-                                <p>Temperature</p>
-                                <p>Feels like</p>
-                                <p>Min Temperature</p>
-                                <p>Max Temperature</p>
-                                <p>Pressure</p>
-                                <p>Humidity</p>
-                            </div>
-
-                            <div className='temp-info info-data'>
-                                <p className='important'>{weatherData.main.temp}°C</p>
-                                <p className='important'>{weatherData.main.feels_like}°C</p>
-                                <p>{weatherData.main.temp_min}°C</p>
-                                <p>{weatherData.main.temp_max}°C</p>
-                                <p>{weatherData.main.pressure} hPa</p>
-                                <p>{weatherData.main.humidity}%</p>
-                            </div>
-
-                            <div className='temp-info'>
-                                <p>Visibility</p>
-                                <p>Cloudiness</p>
-                                <p>Wind Speed</p>
-                                <p>Wind Direction</p>
-                            </div>
-
-                            <div className='temp-info info-data'>
-                                <p>{weatherData.visibility / 1000} km</p>
-                                <p>{weatherData.clouds.all}%</p>
-                                <p className='important'>{weatherData.wind.speed} m/s</p>
-                                <p>{weatherData.wind.deg}°</p>
-                            </div>
-
-                            <div className='sun-container'>
-                                <div className='sunrise-set-icon sun-rise'>
-                                    <WbTwilightIcon fontSize='large' />
+                                <div className='temp-info'>
+                                    <p>Temperature</p>
+                                    <p>Feels like</p>
+                                    <p>Min Temperature</p>
+                                    <p>Max Temperature</p>
+                                    <p>Pressure</p>
+                                    <p>Humidity</p>
                                 </div>
 
-                                <div className='sun-rise-set-container'>
-                                    <div className='sun-set-rise-title'>
-                                        <p>Sunrise</p>
-                                        <p>Sunset</p>
+                                <div className='temp-info info-data'>
+                                    <p className='important'>{weatherData.main.temp}°C</p>
+                                    <p className='important'>{weatherData.main.feels_like}°C</p>
+                                    <p>{weatherData.main.temp_min}°C</p>
+                                    <p>{weatherData.main.temp_max}°C</p>
+                                    <p>{weatherData.main.pressure} hPa</p>
+                                    <p>{weatherData.main.humidity}%</p>
+                                </div>
+
+                                <div className='temp-info'>
+                                    <p>Visibility</p>
+                                    <p>Cloudiness</p>
+                                    <p>Wind Speed</p>
+                                    <p>Wind Direction</p>
+                                </div>
+
+                                <div className='temp-info info-data'>
+                                    <p>{weatherData.visibility / 1000} km</p>
+                                    <p>{weatherData.clouds.all}%</p>
+                                    <p className='important'>{weatherData.wind.speed} m/s</p>
+                                    <p>{weatherData.wind.deg}°</p>
+                                </div>
+
+                                <div className='sun-container'>
+                                    <div className='sunrise-set-icon sun-rise'>
+                                        <WbTwilightIcon fontSize='large' />
                                     </div>
-                                    <div className='sun-set-rise-data'>
-                                        <p>{new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</p>
-                                        <p>{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</p>
+
+                                    <div className='sun-rise-set-container'>
+                                        <div className='sun-set-rise-title'>
+                                            <p>Sunrise</p>
+                                            <p>Sunset</p>
+                                        </div>
+                                        <div className='sun-set-rise-data'>
+                                            <p>{new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                                            <p>{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className='sunrise-set-icon sun-set'>
+                                        <WbTwilightIcon fontSize='large' />
                                     </div>
                                 </div>
 
-                                <div className='sunrise-set-icon sun-set'>
-                                    <WbTwilightIcon fontSize='large' />
+
+                            </div>
+                        </div>
+
+                        <div className='location'>
+                                <div className='loc-title-country'>
+                                    <h2>{weatherData.name}</h2>
+                                    <h3>{weatherData.sys.country}</h3>
                                 </div>
-                            </div>
+                                <div className='search-box-weather-location'>
+                                    <input
+                                        type="text"
+                                        placeholder="Enter city name"
+                                        value={city}
+                                        onChange={(e) => setCity(e.target.value)}
+                                    />
+                                    <button className='input-button' onClick={fetchWeatherData}>Get Weather</button>
+                                </div>
 
-
-                        </div>
-                    </div>
-                    
-                    <div className='location'>
-                            <div className='loc-title-country'>
-                                <h2>{weatherData.name}</h2>
-                                <h3>{weatherData.sys.country}</h3>
                             </div>
-                            <div className='search-box-weather-location'>
-                                <input
-                                    type="text"
-                                    placeholder="Enter city name"
-                                    value={city}
-                                    onChange={(e) => setCity(e.target.value)}
-                                />
-                                <button className='input-button' onClick={fetchWeatherData}>Get Weather</button>
-                            </div>
-
-                        </div>
-                   </> 
+                    </>
                 )}
             </div>
         </div>

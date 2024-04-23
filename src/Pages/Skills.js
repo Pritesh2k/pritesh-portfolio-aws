@@ -121,6 +121,11 @@ function Skills() {
 
       <div className='skills-header'>
         <div className='skills-content-container'>
+          <div className='mid-mount-continer'>
+
+
+            
+          </div>
           <div className='top-container'>
             <div className='top-left' onClick={() => { handleCategoryClick("Technical"); }}>
               Technical

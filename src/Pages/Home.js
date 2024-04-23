@@ -18,13 +18,15 @@ function Home() {
               <a href='https://github.com/Pritesh2k' className='link'><GitHubIcon fontSize='large'/></a>
               <a href='https://www.linkedin.com/in/pritesh-parekh2000/' className='link'><LinkedInIcon fontSize='large'/></a>
             </div>
+            <div className='name-title'>Portfolio</div>
           </div>
-          <div className='name-title'>Portfolio</div>
         </div>
         <div className='home-header'>
           <div className='home-intro-container'>hi my name is,</div>
           <div className='home-intro-name'>Pritesh Parekh</div>
-          <div className='home-short-desc'>I build websites and systems</div>
+          <div className='home-short-desc'>
+            I build websites and systems
+          </div>
           <div className='home-line' />
           <div className='home-short-about'>I am a Full-Stack developer building (and occasionally designing) exceptional digital experiences and systems. I am currently focused on building accessible, quality of life products for everyday use.</div>
         </div>
