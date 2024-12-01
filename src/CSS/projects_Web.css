@@ -1,0 +1,63 @@
+.TerraWater_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+.terra_img{
+    width: 100%;
+    height: 60%;
+
+    object-fit: fit;
+
+    border-radius: 10px;
+}
+
+.Terra_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+
+    opacity: 0;
+
+    animation: terra_intro_anim 1s ease-in-out forwards;
+}
+
+.Terra_info ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.Terra_info button{
+    width: 80%;
+    height: 20%;
+
+    margin-top: 1rem;
+
+    background-color: rgb(206, 97, 56);
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+@keyframes terra_intro_anim{
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        height: 30%;
+        opacity: 1;
+    }
+}

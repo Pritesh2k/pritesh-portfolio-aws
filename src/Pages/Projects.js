@@ -4,8 +4,6 @@ import '../CSS/projects.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WeatherApp from './Components/WeatherAPP';
 
-import NewsAPPIMG from '../Assets/newsapp.png'
-
 function Projects() {
   const [selectedProject, setSelectedProject] = useState('FYP');
 
@@ -18,6 +16,7 @@ function Projects() {
       <div className='projects-header'>
         <div className='projects-title'>Projects</div>
         <div className='projects-line' />
+        <div className='projects-sub-title'>Learning</div>
       </div>
       <div className='projects-subheader'>
         <div id='scroll-box' className='project-nav'>
@@ -25,7 +24,6 @@ function Projects() {
           <a onClick={() => handleProjectClick('web-portfolio')}>Web Portfolio</a>
           <a onClick={() => handleProjectClick('python-scripting')}>Python Client Server</a>
           <a onClick={() => handleProjectClick('Weather-API')}>Weather APP</a>
-          <a onClick={() => handleProjectClick('news-API')}>News APP</a>
         </div>
 
         {/* Render project content based on selectedProject */}
@@ -136,17 +134,6 @@ function Projects() {
             <div id='Weather-API'>
               <div className='project-description-weather'>
                 <WeatherApp />
-              </div>
-            </div>
-          )}
-
-          {selectedProject === 'news-API' && (
-            <div id='news-API' className='news-content'>
-              <div className='news-img-container'>
-                <img className='news-img' src={NewsAPPIMG}/>
-                <a className='visit-site'>
-                  Visit Site
-                </a>
               </div>
             </div>
           )}

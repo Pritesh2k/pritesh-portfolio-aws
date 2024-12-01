@@ -8,6 +8,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import About from './Pages/About';
 import SentimentAnalysis from './Pages/Components/SentimentAnalysis';
 import NewsAPI from './Pages/Components/NewsAPI';
+import Projects_Web from './Pages/Projects_Web';
 
 function App() {
   const mainContainerRef = useRef(null);
@@ -71,7 +72,8 @@ function App() {
           <li className='item' onClick={() => scrollToSection('home')}>Home</li>
           <li className='item' onClick={() => scrollToSection('about')}>About</li>
           <li className='item' onClick={() => scrollToSection('skills')}>Skills</li>
-          <li className='item' onClick={() => scrollToSection('projects')}>Projects</li>
+          <li className='item' onClick={() => scrollToSection('projects')}>Projects | Learning</li>
+          <li className='item' onClick={() => scrollToSection('projects_web')}>Projects | Web Designs</li>
           <li className='item' onClick={() => scrollToSection('contact')}>Contact</li>
         </ul>
       </div>
@@ -89,11 +91,11 @@ function App() {
         <div className={`page ${navOpen ? 'darken' : ''}`} id="projects">
           <Projects />
         </div>
-        <div className={`page ${navOpen ? 'darken' : ''}`} id="contact">
-          <Contact />
+        <div className={`page ${navOpen ? 'darken' : ''}`} id="projects_web">
+          <Projects_Web />
         </div>
         <div className={`page ${navOpen ? 'darken' : ''}`} id="contact">
-          <NewsAPI />
+          <Contact />
         </div>
       </div>
     </div>
