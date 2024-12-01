@@ -43,7 +43,7 @@ const handleScroll = (event) => {
       <div className='projects-subheader'>
         <div id='scroll-box' className='project-nav'>
           <a onClick={() => handleProjectClick('TerraWater')}>TerraWater</a>
-          <a onClick={() => handleProjectClick('CoffeeShop')}>Coffee Shop</a>
+          {/* <a onClick={() => handleProjectClick('CoffeeShop')}>Coffee Shop</a> */}
         </div>
 
         {/* Render project content based on selectedProject */}
