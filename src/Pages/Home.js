@@ -28,7 +28,7 @@ function Home() {
             I build websites and systems
           </div>
           <div className='home-line' />
-          <div className='home-short-about'>I am a Full-Stack developer building (and occasionally designing) exceptional digital experiences and systems. I am currently focused on building accessible, quality of life products for everyday use.</div>
+          <div className='home-short-about'>I am a Full-Stack developer building anddesigning exceptional digital experiences and systems. I am currently focused on building accessible, quality of life products for everyday use.</div>
         </div>
       </div>
     </>
