@@ -73,7 +73,7 @@ function App() {
           <li className='item' onClick={() => scrollToSection('about')}>About</li>
           <li className='item' onClick={() => scrollToSection('skills')}>Skills</li>
           <li className='item' onClick={() => scrollToSection('projects')}>Projects | Learning</li>
-          <li className='item' onClick={() => scrollToSection('projects_web')}>Projects | Web Designs</li>
+          <li className='item new' onClick={() => scrollToSection('projects_web')}>Projects | Web Designs</li>
           <li className='item' onClick={() => scrollToSection('contact')}>Contact</li>
         </ul>
       </div>

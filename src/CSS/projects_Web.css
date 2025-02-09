@@ -7,6 +7,7 @@
 
     width: 100%;
     height: 100%;
+    padding: 1rem;
 }
 
 .terra_img{
@@ -20,34 +21,60 @@
 
 .Terra_info{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
 
     width: 100%;
     height: 30%;
 
     opacity: 0;
+    padding: 1rem;
 
-    animation: terra_intro_anim 1s ease-in-out forwards;
+    animation: terra_intro_anim 0.5s ease-in-out forwards;
 }
 
 .Terra_info ul{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+.Terra_info ul li .bold {
+    font-weight: 600;
+}
+
 .Terra_info button{
-    width: 80%;
-    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: 2rem;
+    bottom: 2rem;
+
+    width: 10dvw;
+    height: 10dvw;
 
     margin-top: 1rem;
+    font-size: 1.5dvw;
+    font-weight: 600;
 
     background-color: rgb(206, 97, 56);
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
+}
+
+.Terra_info button:hover{
+    transition: 0.5s ease-in-out;
+    background-color: rgb(163, 74, 41);
 }
 
 @keyframes terra_intro_anim{
@@ -62,38 +89,104 @@
     }
 }
 
-/* Coffee Shop */
+/* Portfolio */
 
-.coffee_shop_container{
+.Portfolio_container{
     display: flex;
     justify-content: center;
     align-items: center;
 
     flex-direction: column;
+
     width: 100%;
     height: 100%;
+    padding: 1rem;
 }
 
-.coffee_shop_container .menu{
+.Portfolio_img{
+    width: 100%;
+    height: 60%;
+
+    object-fit: fit;
+
+    border-radius: 10px;
+}
+
+.Portfolio_info{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    width: 100%;
+    height: 30%;
+
+    opacity: 0;
+    padding: 1rem;
+
+    animation: terra_intro_anim 0.5s ease-in-out forwards;
+}
+
+.Portfolio_info ul{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
 
-    width: inherit;
-    height: 10%;
-    background-color: rgb(143, 0, 0);
-    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
+.Portfolio_info ul li .bold {
     font-weight: 600;
 }
 
-.coffee_shop_container .body{
+.Portfolio_info button{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 
-    width: inherit;
-    height: 100%;
+    right: 2rem;
+    bottom: 2rem;
 
-    background-color: rgb(172, 167, 167);
+    width: 10dvw;
+    height: 10dvw;
+
+    margin-top: 1rem;
+    font-size: 1.5dvw;
+    font-weight: 600;
+
+    background-color: rgb(109, 11, 11);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.Portfolio_info button:hover{
+    transition: 0.5s ease-in-out;
+    background-color: rgba(27, 27, 27, 0.87);
+}
+
+.portfolio_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: 2rem;
+
+    width: 10dvw;
+    height: 10dvw;
+
+    margin-top: 1rem;
+    font-size: 1.5dvw;
+    font-weight: 600;
+
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border: none;
+    border-radius: 10px;
 }

@@ -153,6 +153,10 @@
   font-size: 1vw;
 }
 
+.new{
+  text-shadow: 0 0 20px #ff0000;
+}
+
 .nav-container .nav-items li {
   font-weight: 600;
   text-transform: uppercase;

@@ -69,6 +69,13 @@
     box-shadow: 0px 0px 10px 0px rgb(253, 0, 0);
 }
 
+.date-last-edited{
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.582);
+}
+
 .project-nav{
     display: flex;
     justify-content: center;

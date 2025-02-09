@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import '../CSS/projects_Web.css';
 
 import Terra_Water from '../Assets/terra_home.png'
+import PortfolioIMG from '../Assets/Portfolio-img.png'
 
 function Projects_Web() {
   const [selectedProject, setSelectedProject] = useState('FYP');
@@ -39,11 +40,12 @@ const handleScroll = (event) => {
         <div className='projects-title'>Projects</div>
         <div className='projects-line' />
         <div className='projects-sub-title'>Web UI</div>
+        <div className='date-last-edited'>2025</div>
       </div>
       <div className='projects-subheader'>
         <div id='scroll-box' className='project-nav'>
-          <a onClick={() => handleProjectClick('TerraWater')}>TerraWater</a>
-          {/* <a onClick={() => handleProjectClick('CoffeeShop')}>Coffee Shop</a> */}
+        <a onClick={() => handleProjectClick('Portfolio')}>Portfolio</a>
+          <a className='item' onClick={() => handleProjectClick('TerraWater')}>TerraWater</a>
         </div>
 
         {/* Render project content based on selectedProject */}
@@ -52,23 +54,40 @@ const handleScroll = (event) => {
             <div className='TerraWater_container'>
                 <img className='terra_img' src={Terra_Water}/>
                 <div className='Terra_info'>
+                  <h1>Terra Water Indonesia</h1>
                     <ul>
-                        <li>Hosted On: Wix</li>
-                        <li>Assets: Terra Water Indonesia</li>
-                        <li>Designed By: Pritesh</li>
-                        <button className='terra_btn' onClick={()=>{
+                        <li><span className='bold'>Project Type:</span> Client | On-Site</li>
+                        <li><span className='bold'>Website Hosted On:</span> Wix</li>
+                        <li><span className='bold'>Assets By:</span> Terra Water Indonesia</li>
+                        <li>-</li>
+                        <li><span className='bold'>Designed By:</span> Pritesh</li>
+                        <li><span className='bold'>Developed By:</span> Pritesh</li>
+                        <li><span className='bold'>Date:</span> June 2024 (6 weeks)</li>
+                    </ul>
+                    <button className='terra_btn' onClick={()=>{
                             redirectToWebsite()
                         }}>Visit Site</button>
-                    </ul>
                 </div>
             </div>
           )}
 
             {/* Coffee Shop */}
-            {selectedProject === 'CoffeeShop' && (
-            <div className='coffee_shop_container'>
-                <div className='menu'>Menu</div>
-                <div id='scroll-box' className='body'>body</div>
+            {selectedProject === 'Portfolio' && (
+            <div className='Portfolio_container'>
+                <img className='Portfolio_img' src={PortfolioIMG}/>
+                <div className='Portfolio_info'>
+                  <h1>Portfolio</h1>
+                    <ul>
+                        <li><span className='bold'>Project Type:</span> Personal Project</li>
+                        <li><span className='bold'>Website Hosted On:</span> AWS</li>
+                        <li><span className='bold'>Assets By:</span> Pritesh</li>
+                        <li>-</li>
+                        <li><span className='bold'>Designed By:</span> Pritesh</li>
+                        <li><span className='bold'>Developed By:</span> Pritesh</li>
+                        <li><span className='bold'>Date:</span> February 2023</li>
+                    </ul>
+                    <button className='portfolio_btn'>You Are Currently Here</button>
+                </div>
             </div>
           )}
         </div>
