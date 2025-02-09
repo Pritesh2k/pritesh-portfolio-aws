@@ -17,7 +17,6 @@ function Projects() {
         <div className='projects-title'>Projects</div>
         <div className='projects-line' />
         <div className='projects-sub-title'>Learning</div>
-        <div className='date-last-edited'>2023</div>
       </div>
       <div className='projects-subheader'>
         <div id='scroll-box' className='project-nav'>

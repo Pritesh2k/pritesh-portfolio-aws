@@ -34,6 +34,10 @@
     animation: terra_intro_anim 0.5s ease-in-out forwards;
 }
 
+.Terra_info h4{
+    color: green;
+}
+
 .Terra_info ul{
     display: flex;
     justify-content: center;
@@ -74,7 +78,7 @@
 
 .Terra_info button:hover{
     transition: 0.5s ease-in-out;
-    background-color: rgb(163, 74, 41);
+    background-color: rgb(31, 89, 112);
 }
 
 @keyframes terra_intro_anim{
@@ -159,7 +163,7 @@
     font-size: 1.5dvw;
     font-weight: 600;
 
-    background-color: rgb(109, 11, 11);
+    background-color: rgba(27, 27, 27, 0.87);
     color: white;
     border: none;
     border-radius: 10px;
@@ -167,7 +171,7 @@
 
 .Portfolio_info button:hover{
     transition: 0.5s ease-in-out;
-    background-color: rgba(27, 27, 27, 0.87);
+    background-color: rgb(109, 11, 11);
 }
 
 .portfolio_btn{

@@ -64,6 +64,7 @@ const handleScroll = (event) => {
                         <li><span className='bold'>Developed By:</span> Pritesh</li>
                         <li><span className='bold'>Date:</span> June 2024 (6 weeks)</li>
                     </ul>
+                    <h4>Sales Increase ↗  Organic Growth ↗  SEO ↗  Customer Satisfaction ↗  Customer Retention ↗</h4>
                     <button className='terra_btn' onClick={()=>{
                             redirectToWebsite()
                         }}>Visit Site</button>
