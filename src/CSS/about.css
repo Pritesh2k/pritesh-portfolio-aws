@@ -84,6 +84,7 @@
     font-family: "Lora", serif;
     font-size: 1.5vw;
     text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
 }
 
 .journey-title-toggle {
@@ -121,8 +122,9 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     color: rgb(255, 0, 0);
+    text-shadow: 0 0 15px #ff0000cb, 0 0 3em #ff0000;
 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav-line {
