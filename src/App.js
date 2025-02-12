@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
+
 import './App.css';
+
 import Home from './Pages/Home';
 import Skills from './Pages/Skills';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import About from './Pages/About';
-import SentimentAnalysis from './Pages/Components/SentimentAnalysis';
-import NewsAPI from './Pages/Components/NewsAPI';
 import Projects_Web from './Pages/Projects_Web';
 
 function App() {

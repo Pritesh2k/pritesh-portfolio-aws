@@ -1,38 +1,94 @@
-import React from 'react';
-import '../CSS/home.css'
-
-import profilePic from '../Assets/Profile-pic.jpg'
-
+import React, { useState } from 'react';
+import '../CSS/home.css';
+import profilePic from '../Assets/Profile-pic.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-function Home() {
+const Home = () => {
+  // State to track if the light is toggled
+  const [isGreen, setIsGreen] = useState(true);
+
+  // Handle button click to toggle the color
+  const handleToggle = () => {
+    setIsGreen(!isGreen);
+  };
+
+  // Dynamic styles for the button based on state
+  const buttonStyle = {
+    border: 'none',
+    boxShadow: isGreen
+      ? '0px 0px 25px 10px rgba(255, 0, 0, 0.03), 0px 0px 500px 50px rgba(255, 0, 0, 0.04)'
+      : '0px 0px 25px 10px rgba(255, 0, 0, 0.356), 0px 0px 500px 50px rgba(255, 0, 0, 0.534)',
+    transition: 'all 0.3s ease-in-out'
+  };
+
+  // Dynamic styles for the light container
+  const lightStyle = {
+    opacity: isGreen ? '0' : '1',
+    transition: 'opacity 0.5s ease-in-out',
+    pointerEvents: isGreen ? 'auto' : 'none'
+  };
+  
 
   return (
-    <>
-      <div className='home-container'>
-        <div className='home-subheader'>
-          <div className='picture-container'>
-            <img className='cover-picture' src={profilePic} alt='profile' />
-            <div className='link-container'>
-              <a href='https://github.com/Pritesh2k' className='link'><GitHubIcon fontSize='large'/></a>
-              <a href='https://www.linkedin.com/in/pritesh-parekh2000/' className='link'><LinkedInIcon fontSize='large'/></a>
-            </div>
-            <div className='name-title'>Portfolio</div>
+    <div className="home-container">
+      <div className="home-subheader">
+        <div className="picture-container">
+          <img className="cover-picture" src={profilePic} alt="profile" />
+          <div className="link-container">s
+            <a href="https://github.com/Pritesh2k" className="link">
+              <GitHubIcon fontSize="large" />
+            </a>
+            <a href="https://www.linkedin.com/in/pritesh-parekh2000/" className="link">
+              <LinkedInIcon fontSize="large" />
+            </a>
           </div>
-        </div>
-        <div className='home-header'>
-          <div className='home-intro-container'>hi my name is,</div>
-          <div className='home-intro-name'>Pritesh Parekh</div>
-          <div className='home-short-desc'>
-            I build websites and systems
+
+          <div className="light" style={lightStyle}>
+            <div id="lineh1"></div>
+            <div id="lineh2"></div>
+            <div id="lineh3"></div>
+            <div id="lineh4"></div>
+            <div id="lineh5"></div>
+            <div id="lineh6"></div>
+            <div id="lineh7"></div>
+            <div id="lineh8"></div>
+            <div id="lineh9"></div>
+            <div id="lineh10"></div>
+            <div id="lineh11"></div>
+            <div id="lineh12"></div>
           </div>
-          <div className='home-line' />
-          <div className='home-short-about'>I am a Full-Stack developer building and designing exceptional digital experiences and systems. I am currently empolyed as a cybersecurity graduate, but focus on building accessible, quality of life products for everyday use.</div>
+
+          {/* <div className="name-title">
+            <div className='Line-Port' />
+            <span>P</span>
+            <span>O</span>
+            <span>R</span>
+            <span>T</span>
+            <span>F</span>
+            <span>O</span>
+            <span>L</span>
+            <span>I</span>
+            <span>O</span>
+          </div> */}
+
         </div>
       </div>
-    </>
-  )
-}
+      <div className="home-header">
+        <div className="home-intro-name">
+          <div className="welcome-changes">Welcome</div>
+          <div className="port-my">My</div>
+          <div className="port-name-is">Name Is</div>
+          <div className="prot-changes">Pritesh</div>
+          <button
+            className="light-toggle-btn"
+            onClick={handleToggle}
+            style={buttonStyle}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Home;
