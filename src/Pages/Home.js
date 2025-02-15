@@ -35,7 +35,9 @@ const Home = () => {
       <div className="home-subheader">
         <div className="picture-container">
           <img className="cover-picture" src={profilePic} alt="profile" />
-          <div className="link-container">s
+          <div className="link-container">
+            <div className='home-line'/>
+            <div className='home-line icon-line-1'/>
             <a href="https://github.com/Pritesh2k" className="link">
               <GitHubIcon fontSize="large" />
             </a>
