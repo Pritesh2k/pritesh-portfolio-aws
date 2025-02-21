@@ -28,7 +28,7 @@ const Home = () => {
     transition: 'opacity 0.5s ease-in-out',
     pointerEvents: isGreen ? 'auto' : 'none'
   };
-  
+
 
   return (
     <div className="home-container">
@@ -36,14 +36,16 @@ const Home = () => {
         <div className="picture-container">
           <img className="cover-picture" src={profilePic} alt="profile" />
           <div className="link-container">
-            <div className='home-line'/>
-            <div className='home-line icon-line-1'/>
-            <a href="https://github.com/Pritesh2k" className="link">
-              <GitHubIcon fontSize="large" />
-            </a>
-            <a href="https://www.linkedin.com/in/pritesh-parekh2000/" className="link">
-              <LinkedInIcon fontSize="large" />
-            </a>
+            <div className='link'>
+              <a href="https://github.com/Pritesh2k" className="github">
+                <GitHubIcon fontSize="large" />
+              </a>
+            </div>
+            <div className='link'>
+              <a href="https://www.linkedin.com/in/pritesh-parekh2000/" className="linkedIn">
+                <LinkedInIcon fontSize="large" />
+              </a>
+            </div>
           </div>
 
           <div className="light" style={lightStyle}>
@@ -60,19 +62,6 @@ const Home = () => {
             <div id="lineh11"></div>
             <div id="lineh12"></div>
           </div>
-
-          {/* <div className="name-title">
-            <div className='Line-Port' />
-            <span>P</span>
-            <span>O</span>
-            <span>R</span>
-            <span>T</span>
-            <span>F</span>
-            <span>O</span>
-            <span>L</span>
-            <span>I</span>
-            <span>O</span>
-          </div> */}
 
         </div>
       </div>
